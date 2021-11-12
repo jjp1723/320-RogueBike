@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Brian\Documents\GitHub\RogueBike\Documents\GitHub\RogueBike\RogueBike\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="446984183">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4251510771" Language="SFX" Hash="2728345760">
+			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
+			<ShortName>UnitySoundBank</ShortName>
+			<Path>UnitySoundBank.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
