@@ -22,14 +22,24 @@ public class PlayerController : MonoBehaviour
     private float currVelocity;
     private Vector2 currAcceleration;
 
+    //Card to turn
+    [SerializeField]
+    private List<GameObject> cards;
+    private Dictionary<string,TurnCard> turnDict = new Dictionary<string, TurnCard>();
+
     private void Start()
     {
         player = this.gameObject;
         rb = player.GetComponent<Rigidbody2D>();
+        for(int i = 0; i < cards.Count; i++)
+        {
+            Debug.Log(cards[i].name);
+            turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
+        }
     }
 
     public void CheckForInput() {
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
         if (Input.GetKey(KeyCode.A))
         {
             RotatePlayer(rotationalSpeed * Time.deltaTime);
@@ -45,6 +55,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             MovePlayer(brakeForceMagnitude * Time.deltaTime);
+        }
+
+        //play card. Checking on up to make it only happen once
+        if (Input.GetKeyUp(KeyCode.M))
+        {
+            player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
+        }
+        if (Input.GetKeyUp(KeyCode.N))
+        {
+            player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
         }
         
     }
@@ -63,5 +83,19 @@ public class PlayerController : MonoBehaviour
     private void RotatePlayer(float rotation)
     {
         player.transform.rotation = Quaternion.Euler(player.transform.forward * rotation + player.transform.eulerAngles);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collider)
+    {
+        Debug.Log(collider.gameObject.name);
+        Debug.Log(collider.GetContact(0));
+        Vector3 normal = collider.GetContact(0).normal;
+        Debug.Log(Vector3.Angle(normal, rb.velocity));
+        Debug.Log(collider.GetContact(0).relativeVelocity);
+    }
+
+    private void OnCollisionExit2D(Collision2D collider)
+    {
+        rb.angularVelocity = 0;
     }
 }
