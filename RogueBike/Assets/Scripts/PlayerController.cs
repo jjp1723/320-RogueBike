@@ -92,10 +92,12 @@ public class PlayerController : MonoBehaviour
         Vector3 normal = collider.GetContact(0).normal;
         Debug.Log(Vector3.Angle(normal, rb.velocity));
         Debug.Log(collider.GetContact(0).relativeVelocity);
+        rb.drag = 8;
     }
 
     private void OnCollisionExit2D(Collision2D collider)
     {
         rb.angularVelocity = 0;
+        rb.drag = 2;
     }
 }
