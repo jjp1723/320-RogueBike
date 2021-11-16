@@ -26,7 +26,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Jeopardy-trap" ID="{48BE2B1C-E76D-4C33-BABF-33E56FB15849}" ShortID="695967393">
+								<Sound Name="Undertale_-_Megalovania" ID="{4D2586F0-1339-4D16-8432-97AC813D55B0}" ShortID="699744748">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
@@ -36,17 +36,17 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Jeopardy-trap" ID="{39FF39D0-A983-4337-86D2-9DEFF0C8951F}">
+										<AudioFileSource Name="Undertale_-_Megalovania" ID="{EDBFD203-60F8-4C76-A8F6-46498BD6BE08}">
 											<Language>SFX</Language>
-											<AudioFile>Jeopardy-trap.wav</AudioFile>
+											<AudioFile>Undertale_-_Megalovania.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="854344791"/>
+												<MediaID ID="992891196"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Jeopardy-trap" ID="{39FF39D0-A983-4337-86D2-9DEFF0C8951F}" Platform="Linked"/>
+										<ActiveSource Name="Undertale_-_Megalovania" ID="{EDBFD203-60F8-4C76-A8F6-46498BD6BE08}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -54,7 +54,7 @@
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Jeopardy-trap" ID="{48BE2B1C-E76D-4C33-BABF-33E56FB15849}"/>
+										<ItemRef Name="Undertale_-_Megalovania" ID="{4D2586F0-1339-4D16-8432-97AC813D55B0}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 							</GroupingInfo>
