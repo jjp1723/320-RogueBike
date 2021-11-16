@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     //Card to turn
     [SerializeField]
     private List<GameObject> cards;
-    private Dictionary<string,TurnCard> turnDict = new Dictionary<string, TurnCard>();
+    private Dictionary<string, TurnCard> turnDict = new Dictionary<string, TurnCard>();
 
     private void Start()
     {
