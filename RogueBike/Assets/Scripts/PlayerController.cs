@@ -57,14 +57,18 @@ public class PlayerController : MonoBehaviour
             MovePlayer(brakeForceMagnitude * Time.deltaTime);
         }
 
-        //play card. Checking on up to make it only happen once
-        if (Input.GetKeyUp(KeyCode.M))
+        //can only play cards if paused
+        if (Time.timeScale < 1)
         {
-            player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
-        }
-        if (Input.GetKeyUp(KeyCode.N))
-        {
-            player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
+            //play card. Checking on up to make it only happen once
+            if (Input.GetKeyUp(KeyCode.M))
+            {
+                player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
+            }
+            if (Input.GetKeyUp(KeyCode.N))
+            {
+                player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
+            }
         }
         
     }
