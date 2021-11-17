@@ -23,19 +23,19 @@ public class PlayerController : MonoBehaviour
     private Vector2 currAcceleration;
 
     //Card to turn
-    [SerializeField]
-    private List<GameObject> cards;
-    private Dictionary<string, TurnCard> turnDict = new Dictionary<string, TurnCard>();
+    //[SerializeField]
+    //private List<GameObject> cards;
+    //private Dictionary<string, TurnCard> turnDict = new Dictionary<string, TurnCard>();
 
     private void Start()
     {
         player = this.gameObject;
         rb = player.GetComponent<Rigidbody2D>();
-        for(int i = 0; i < cards.Count; i++)
-        {
-            Debug.Log(cards[i].name);
-            turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
-        }
+        //for(int i = 0; i < cards.Count; i++)
+        //{
+        //    Debug.Log(cards[i].name);
+        //    turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
+        //}
     }
 
     public void CheckForInput() {
@@ -57,19 +57,19 @@ public class PlayerController : MonoBehaviour
             MovePlayer(brakeForceMagnitude * Time.deltaTime);
         }
 
-        //can only play cards if paused
-        if (Time.timeScale < 1)
-        {
-            //play card. Checking on up to make it only happen once
-            if (Input.GetKeyUp(KeyCode.M))
-            {
-                player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
-            }
-            if (Input.GetKeyUp(KeyCode.N))
-            {
-                player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
-            }
-        }
+        ////can only play cards if paused
+        //if (Time.timeScale < 1)
+        //{
+        //    //play card. Checking on up to make it only happen once
+        //    if (Input.GetKeyUp(KeyCode.M))
+        //    {
+        //        player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
+        //    }
+        //    if (Input.GetKeyUp(KeyCode.N))
+        //    {
+        //        player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
+        //    }
+        //}
         
     }
 
