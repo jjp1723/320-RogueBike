@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="mainSequence" ID="{756B427D-4680-45BF-9E23-BFA6A0D835ED}" ShortID="413308389">
+				<RandomSequenceContainer Name="MenuSequence" ID="{756B427D-4680-45BF-9E23-BFA6A0D835ED}" ShortID="413308389">
 					<PropertyList>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 					</PropertyList>
@@ -16,7 +16,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="mainContainer" ID="{9A302A7D-E7E2-4385-A839-423FCB46F5AD}" ShortID="197508408">
+						<SwitchContainer Name="introContainer" ID="{4D42660A-49A2-4B6A-B658-7F8019CCF097}" ShortID="1024651505">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
@@ -26,7 +26,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Undertale_-_Megalovania" ID="{4D2586F0-1339-4D16-8432-97AC813D55B0}" ShortID="699744748">
+								<Sound Name="intro" ID="{B2DA7D85-5D3A-4EFA-A0C1-E40C5EF7A1E7}" ShortID="195735080">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
@@ -36,17 +36,43 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Undertale_-_Megalovania" ID="{EDBFD203-60F8-4C76-A8F6-46498BD6BE08}">
+										<AudioFileSource Name="intro" ID="{300F0720-A589-4C79-A636-EAF9321626E0}">
 											<Language>SFX</Language>
-											<AudioFile>Undertale_-_Megalovania.wav</AudioFile>
+											<AudioFile>intro.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="992891196"/>
+												<MediaID ID="14557926"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Undertale_-_Megalovania" ID="{EDBFD203-60F8-4C76-A8F6-46498BD6BE08}" Platform="Linked"/>
+										<ActiveSource Name="intro" ID="{300F0720-A589-4C79-A636-EAF9321626E0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="introLoop" ID="{DF288DCF-6BED-4F56-B0BD-18B264ACE0F5}" ShortID="1044336253">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="introLoop" ID="{C9835F67-1737-4388-8CAC-7C99C3411F87}">
+											<Language>SFX</Language>
+											<AudioFile>introLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="316690257"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="introLoop" ID="{C9835F67-1737-4388-8CAC-7C99C3411F87}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -54,11 +80,99 @@
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Undertale_-_Megalovania" ID="{4D2586F0-1339-4D16-8432-97AC813D55B0}"/>
+										<ItemRef Name="intro" ID="{B2DA7D85-5D3A-4EFA-A0C1-E40C5EF7A1E7}"/>
+										<PropertyList>
+											<Property Name="FirstOccurenceOnly" Type="bool" Value="True"/>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="introLoop" ID="{DF288DCF-6BED-4F56-B0BD-18B264ACE0F5}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 							</GroupingInfo>
 						</SwitchContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="LoopSequence" ID="{B5984944-A58A-48C0-9C41-C35A5F970F44}" ShortID="181130359">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="mainLoop" ID="{DA276770-3983-4954-8692-C54B0FAED2D0}" ShortID="527414010">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mainLoop" ID="{FD2CAA18-D328-4854-9E4F-E0FE287697F8}">
+									<Language>SFX</Language>
+									<AudioFile>mainLoop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="594753247"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="mainLoop" ID="{FD2CAA18-D328-4854-9E4F-E0FE287697F8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" ShortID="278600950">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="endLoop" ID="{8FB59F4D-89A3-461A-8DD4-D1EAB986B983}" ShortID="2447178">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="endLoop" ID="{9549CC4B-5A7F-435F-99AB-978D1F0BCCDE}">
+									<Language>SFX</Language>
+									<AudioFile>endLoop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="245698847"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="endLoop" ID="{9549CC4B-5A7F-435F-99AB-978D1F0BCCDE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>

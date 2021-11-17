@@ -3,7 +3,72 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D568BED6-4212-407D-AF00-EFC0FA3F52D9}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="test_event" ID="{3E7A70D2-7BF7-4D45-A4DD-4AF6FDA02C9A}"/>
+				<Event Name="win_SFX" ID="{3E7A70D2-7BF7-4D45-A4DD-4AF6FDA02C9A}">
+					<ChildrenList>
+						<Action Name="" ID="{04C82AE0-A7C9-48C5-9D1C-68E817C20A42}" ShortID="708940398">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="winSFX" ID="{80B32A15-65DF-43FF-9B71-6FCA42F43A17}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9D2B33C2-D919-4D59-9831-BBCB946EDB0F}" ShortID="535218413">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="lose_SFX" ID="{9817A4EB-6A14-4F7C-957D-54339E6E7361}">
+					<ChildrenList>
+						<Action Name="" ID="{2B775E18-4C98-448C-B139-7BF31C5C1A4F}" ShortID="606610778">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="loseSFX" ID="{090CC285-05C6-4D23-98D3-09C23F286C1E}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DE66D6C4-6122-46F0-AE4D-7CD3B33FDCBB}" ShortID="31237254">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="raceStart_SFX" ID="{3D28537E-D66E-4F27-AC08-384B706C9445}">
+					<ChildrenList>
+						<Action Name="" ID="{F6BE8A69-A944-4520-840C-1EFF147643C2}" ShortID="1049670367">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="raceStartSFX" ID="{8FC11730-11D3-4BA7-8545-440E2B511D56}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{400ADAE0-1654-46DE-A106-4942B05DB95B}" ShortID="1015254637">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LoopSequence" ID="{B5984944-A58A-48C0-9C41-C35A5F970F44}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

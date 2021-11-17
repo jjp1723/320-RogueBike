@@ -94,11 +94,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585645211525112850
+    m_lastTime: -8585644474118463057
     List:
-    - name: test_event
-      guid: d2707a3ef77b454da4dd4af6fda02c9a
-      id: 4258653052
+    - name: lose_SFX
+      guid: eba41798146a7c4f957d54339e6e7361
+      id: 2894173942
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,10 +106,44 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: d6be68d512427d40af00efc0fa3f52d9
-      - ElementName: test_event
+      - ElementName: lose_SFX
+        ObjectType: 3
+        guid: eba41798146a7c4f957d54339e6e7361
+      Path: Events\Default Work Unit\lose_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: raceStart_SFX
+      guid: 7e53283d6ed6274fac08384b706c9445
+      id: 1518346846
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: raceStart_SFX
+        ObjectType: 3
+        guid: 7e53283d6ed6274fac08384b706c9445
+      Path: Events\Default Work Unit\raceStart_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: win_SFX
+      guid: d2707a3ef77b454da4dd4af6fda02c9a
+      id: 3574552973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: win_SFX
         ObjectType: 3
         guid: d2707a3ef77b454da4dd4af6fda02c9a
-      Path: Events\Default Work Unit\test_event
+      Path: Events\Default Work Unit\win_SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -139,8 +173,90 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8f3b6e1d8d4459439299130542f81d32
     GuidInternal: 
-    m_lastTime: -8585645211522539400
-    List: []
+    m_lastTime: -8585644469419148034
+    List:
+    - name: stateGroup
+      guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+      id: 2935564353
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8f3b6e1d8d4459439299130542f81d32
+      - ElementName: stateGroup
+        ObjectType: 9
+        guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+      Path: States\Default Work Unit\stateGroup
+      values:
+      - name: end
+        guid: 76be879707fc3444b8e6407f6839211b
+        id: 529726532
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8f3b6e1d8d4459439299130542f81d32
+        - ElementName: stateGroup
+          ObjectType: 9
+          guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+        - ElementName: end
+          ObjectType: 8
+          guid: 76be879707fc3444b8e6407f6839211b
+      - name: game
+        guid: 60dd5e97381f6b4eaf57220b4ce4cf9f
+        id: 702482391
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8f3b6e1d8d4459439299130542f81d32
+        - ElementName: stateGroup
+          ObjectType: 9
+          guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+        - ElementName: game
+          ObjectType: 8
+          guid: 60dd5e97381f6b4eaf57220b4ce4cf9f
+      - name: menu
+        guid: d07748371fa7bd498e5aadd6cb31b53b
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8f3b6e1d8d4459439299130542f81d32
+        - ElementName: stateGroup
+          ObjectType: 9
+          guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+        - ElementName: menu
+          ObjectType: 8
+          guid: d07748371fa7bd498e5aadd6cb31b53b
+      - name: None
+        guid: 591a47dde91cd54f96d16fbfa8f77ef9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8f3b6e1d8d4459439299130542f81d32
+        - ElementName: stateGroup
+          ObjectType: 9
+          guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
+        - ElementName: None
+          ObjectType: 8
+          guid: 591a47dde91cd54f96d16fbfa8f77ef9
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -170,7 +286,7 @@ MonoBehaviour:
     m_lastTime: -8585645211522529429
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
