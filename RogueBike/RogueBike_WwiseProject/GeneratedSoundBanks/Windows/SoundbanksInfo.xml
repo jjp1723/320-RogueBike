@@ -16,10 +16,74 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4251510771" Language="SFX" Hash="2728345760">
+		<SoundBank Id="4251510771" Language="SFX" Hash="4236455736">
 			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
 			<ShortName>UnitySoundBank</ShortName>
 			<Path>UnitySoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2894173942" Name="lose_SFX" ObjectPath="\Events\Default Work Unit\lose_SFX" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="245698847" Language="SFX">
+							<ShortName>endLoop.wav</ShortName>
+							<Path>SFX\endLoop_10C4C929.wem</Path>
+						</File>
+						<File Id="1029459887" Language="SFX">
+							<ShortName>loseRaceSFX.wav</ShortName>
+							<Path>SFX\loseRaceSFX_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1518346846" Name="raceStart_SFX" ObjectPath="\Events\Default Work Unit\raceStart_SFX" DurationType="OneShot" DurationMin="99.483871" DurationMax="99.483871">
+					<IncludedMemoryFiles>
+						<File Id="241615685" Language="SFX">
+							<ShortName>raceStartSFX.wav</ShortName>
+							<Path>SFX\raceStartSFX_D79FB2B7.wem</Path>
+						</File>
+						<File Id="258084987" Language="SFX">
+							<ShortName>mainLoop.wav</ShortName>
+							<Path>SFX\mainLoop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3574552973" Name="win_SFX" ObjectPath="\Events\Default Work Unit\win_SFX" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="245698847" Language="SFX">
+							<ShortName>endLoop.wav</ShortName>
+							<Path>SFX\endLoop_10C4C929.wem</Path>
+						</File>
+						<File Id="787154511" Language="SFX">
+							<ShortName>winRaceSFX.wav</ShortName>
+							<Path>SFX\winRaceSFX_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="241615685" Language="SFX">
+					<ShortName>raceStartSFX.wav</ShortName>
+					<Path>SFX\raceStartSFX_D79FB2B7.wem</Path>
+				</File>
+				<File Id="245698847" Language="SFX">
+					<ShortName>endLoop.wav</ShortName>
+					<Path>SFX\endLoop_10C4C929.wem</Path>
+				</File>
+				<File Id="258084987" Language="SFX">
+					<ShortName>mainLoop.wav</ShortName>
+					<Path>SFX\mainLoop_D79FB2B7.wem</Path>
+				</File>
+				<File Id="594753247" Language="SFX">
+					<ShortName>mainLoop.wav</ShortName>
+					<Path>SFX\mainLoop_10C4C929.wem</Path>
+				</File>
+				<File Id="787154511" Language="SFX">
+					<ShortName>winRaceSFX.wav</ShortName>
+					<Path>SFX\winRaceSFX_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1029459887" Language="SFX">
+					<ShortName>loseRaceSFX.wav</ShortName>
+					<Path>SFX\loseRaceSFX_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
