@@ -18,10 +18,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Camera camera;
 
+    [SerializeField]
+    private GameObject leftTurnCard_TEMP;
+
     // Start is called before the first frame update
     void Start()
     {
         //camera = GetComponent<Camera>();
+
+        leftTurnCard_TEMP = GameObject.Find("LeftTurn_Card");
+        leftTurnCard_TEMP.SetActive(false);
 
         playerController = player.GetComponent<PlayerController>();
         for (int i = 0; i < cards.Count; i++)
@@ -39,6 +45,7 @@ public class GameManager : MonoBehaviour
         //slow down time i.e. 'pause'
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            leftTurnCard_TEMP.SetActive(true);
             //set to 0 for true pause
             Time.timeScale = 0.2f; 
             for(int i = 0; i < cards.Count; i++)
@@ -48,6 +55,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            leftTurnCard_TEMP.SetActive(false);
             for (int i = 0; i < shownCards.Count; i++)
             {
                 Object.Destroy(shownCards[i]);
