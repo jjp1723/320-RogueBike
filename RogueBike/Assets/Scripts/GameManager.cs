@@ -15,9 +15,14 @@ public class GameManager : MonoBehaviour
 
     private List<GameObject> shownCards = new List<GameObject>();
 
+    [SerializeField]
+    private Camera camera;
+
     // Start is called before the first frame update
     void Start()
     {
+        //camera = GetComponent<Camera>();
+
         playerController = player.GetComponent<PlayerController>();
         for (int i = 0; i < cards.Count; i++)
         {
@@ -62,6 +67,19 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.N))
             {
                 player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
+            }
+
+            //test clicking on card with mouse
+            if (Input.GetMouseButtonDown(0)) //left mouse bottom
+            {
+                Vector3 clickpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 click2D = new Vector2(clickpos.x, clickpos.y);
+
+                RaycastHit2D hit = Physics2D.Raycast(click2D, Vector2.zero);
+                if (hit.collider != null)
+                {
+                    Debug.Log(hit.collider.gameObject.name);
+                }
             }
         }
     }
