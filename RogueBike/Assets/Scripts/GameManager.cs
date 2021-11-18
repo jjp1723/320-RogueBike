@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     private List<GameObject> shownCards = new List<GameObject>();
 
-    [SerializeField]
-    private Camera camera;
+    //[SerializeField]
+    //private Camera camera;
 
     [SerializeField]
     private GameObject leftTurnCard_TEMP;
