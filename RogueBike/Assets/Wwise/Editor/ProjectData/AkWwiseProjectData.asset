@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 306eb9cdc1635744a1f72b5e33031921
     GuidInternal: 
-    m_lastTime: -8585645195403654953
+    m_lastTime: -8585645211522519458
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fa9568dadbefda4f8be47ed0b67e6431
     GuidInternal: 
-    m_lastTime: -8585645195406774813
+    m_lastTime: -8585645211525092895
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 20708905d3934048bc3b8fd0fcd778ad
     GuidInternal: 
-    m_lastTime: -8585643448008742674
+    m_lastTime: -8585643472173519250
     List:
     - name: UnitySoundBank
       guid: 5b42ed8c9b7df048ba64953a3cdb5509
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585643448015039677
+    m_lastTime: -8585643426474223497
     List:
     - name: lose_SFX
       guid: eba41798146a7c4f957d54339e6e7361
@@ -110,6 +110,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: eba41798146a7c4f957d54339e6e7361
       Path: Events\Default Work Unit\lose_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: menu
+      guid: b2fb5af17a3c7a4b8eb9382a101c6c94
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: menu
+        ObjectType: 3
+        guid: b2fb5af17a3c7a4b8eb9382a101c6c94
+      Path: Events\Default Work Unit\menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -130,6 +147,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 99.48387
       minDuration: 99.48387
+    - name: Set_State_end
+      guid: ade3d80d8753b844bed5ac644b4a5b3e
+      id: 2300403011
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: Set_State_end
+        ObjectType: 3
+        guid: ade3d80d8753b844bed5ac644b4a5b3e
+      Path: Events\Default Work Unit\Set_State_end
+      maxAttenuation: 0
+      maxDuration: 14.19356
+      minDuration: 14.19356
+    - name: Set_State_game
+      guid: a17a52527d04314085adb081eb1fd447
+      id: 4207344442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: Set_State_game
+        ObjectType: 3
+        guid: a17a52527d04314085adb081eb1fd447
+      Path: Events\Default Work Unit\Set_State_game
+      maxAttenuation: 0
+      maxDuration: 99.48388
+      minDuration: 99.48388
+    - name: Set_State_menu
+      guid: c45384864c8d8f488e85256ee848a7a2
+      id: 2302270969
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: Set_State_menu
+        ObjectType: 3
+        guid: c45384864c8d8f488e85256ee848a7a2
+      Path: Events\Default Work Unit\Set_State_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: win_SFX
       guid: d2707a3ef77b454da4dd4af6fda02c9a
       id: 3574552973
@@ -159,7 +227,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 84316db069ce5349b9da000d879498c1
     GuidInternal: 
-    m_lastTime: -8585645195406780462
+    m_lastTime: -8585645211525102746
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -173,7 +241,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8f3b6e1d8d4459439299130542f81d32
     GuidInternal: 
-    m_lastTime: -8585643448008742674
+    m_lastTime: -8585644469419148034
     List:
     - name: stateGroup
       guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
@@ -269,7 +337,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 0544d9d55fac314db3025e137d74271e
     GuidInternal: 
-    m_lastTime: -8585645195403654953
+    m_lastTime: -8585645211522529429
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -283,11 +351,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 50c3a66f6495e44c8458af95d95cdc9b
     GuidInternal: 
-    m_lastTime: -8585645195403654953
+    m_lastTime: -8585645211522529429
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 020000000300000015000000
+  ExpandedWaapiItemIds: 020000000300000015000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
