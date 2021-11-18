@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void RotatePlayer(float rotation)
+    public void RotatePlayer(float rotation)
     {
         player.transform.rotation = Quaternion.Euler(player.transform.forward * rotation + player.transform.eulerAngles);
     }

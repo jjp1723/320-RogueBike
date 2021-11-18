@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class SO_Card : ScriptableObject
@@ -16,5 +17,9 @@ public class SO_Card : ScriptableObject
     [SerializeField]
     private Sprite background;
     public Sprite Background { get { return background; } }
+
+    //[SerializeField]
+    //private UnityEvent onClick;
+    //public UnityEvent OnClick { get { return onClick; } }
 
 }
