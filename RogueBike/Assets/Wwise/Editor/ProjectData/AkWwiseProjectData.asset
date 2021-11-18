@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 20708905d3934048bc3b8fd0fcd778ad
     GuidInternal: 
-    m_lastTime: -8585643472173519250
+    m_lastTime: -8585643459514775808
     List:
     - name: UnitySoundBank
       guid: 5b42ed8c9b7df048ba64953a3cdb5509
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585643426474223497
+    m_lastTime: -8585643411794775808
     List:
     - name: lose_SFX
       guid: eba41798146a7c4f957d54339e6e7361
@@ -241,7 +241,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8f3b6e1d8d4459439299130542f81d32
     GuidInternal: 
-    m_lastTime: -8585644469419148034
+    m_lastTime: -8585644306134775808
     List:
     - name: stateGroup
       guid: e15ab6d8aff3dc48aa3e2b5aa76aadab

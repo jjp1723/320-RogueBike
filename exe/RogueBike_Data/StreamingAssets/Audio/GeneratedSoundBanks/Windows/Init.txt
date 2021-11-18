@@ -1,0 +1,16 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2935564353	stateGroup			\Default Work Unit\stateGroup	
+
+State	ID	Name	State Group			Notes
+	529726532	end	stateGroup			
+	702482391	game	stateGroup			
+	748895195	None	stateGroup			
+	2607556080	menu	stateGroup			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
