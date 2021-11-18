@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 306eb9cdc1635744a1f72b5e33031921
     GuidInternal: 
-    m_lastTime: -8585645211522519458
+    m_lastTime: -8585645195403654953
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fa9568dadbefda4f8be47ed0b67e6431
     GuidInternal: 
-    m_lastTime: -8585645211525092895
+    m_lastTime: -8585645195406774813
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 20708905d3934048bc3b8fd0fcd778ad
     GuidInternal: 
-    m_lastTime: -8585643472173519250
+    m_lastTime: -8585643448008742674
     List:
     - name: UnitySoundBank
       guid: 5b42ed8c9b7df048ba64953a3cdb5509
@@ -94,8 +94,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585643426474223497
-    List: []
+    m_lastTime: -8585643448015039677
+    List:
+    - name: lose_SFX
+      guid: eba41798146a7c4f957d54339e6e7361
+      id: 2894173942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: lose_SFX
+        ObjectType: 3
+        guid: eba41798146a7c4f957d54339e6e7361
+      Path: Events\Default Work Unit\lose_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: raceStart_SFX
+      guid: 7e53283d6ed6274fac08384b706c9445
+      id: 1518346846
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: raceStart_SFX
+        ObjectType: 3
+        guid: 7e53283d6ed6274fac08384b706c9445
+      Path: Events\Default Work Unit\raceStart_SFX
+      maxAttenuation: 0
+      maxDuration: 99.48387
+      minDuration: 99.48387
+    - name: win_SFX
+      guid: d2707a3ef77b454da4dd4af6fda02c9a
+      id: 3574552973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: win_SFX
+        ObjectType: 3
+        guid: d2707a3ef77b454da4dd4af6fda02c9a
+      Path: Events\Default Work Unit\win_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -108,7 +159,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 84316db069ce5349b9da000d879498c1
     GuidInternal: 
-    m_lastTime: -8585645211525102746
+    m_lastTime: -8585645195406780462
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -122,7 +173,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8f3b6e1d8d4459439299130542f81d32
     GuidInternal: 
-    m_lastTime: -8585643492293929825
+    m_lastTime: -8585643448008742674
     List:
     - name: stateGroup
       guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
@@ -218,7 +269,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 0544d9d55fac314db3025e137d74271e
     GuidInternal: 
-    m_lastTime: -8585645211522529429
+    m_lastTime: -8585645195403654953
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -232,10 +283,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 50c3a66f6495e44c8458af95d95cdc9b
     GuidInternal: 
-    m_lastTime: -8585645211522529429
+    m_lastTime: -8585645195403654953
     List: []
-  ExpandedFileSystemItemIds: 02000000030000000600000007000000
-  ExpandedWaapiItemIds: 010000000500000006000000070000000f000000100000009d0000009e000000b1000000b2000000b3000000fd000000fe000000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
