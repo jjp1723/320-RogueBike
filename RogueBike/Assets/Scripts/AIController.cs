@@ -15,7 +15,10 @@ public class AIController : MonoBehaviour
     {
         rotationalSpeed = ai.RotationalSpeed;
         forwardForceMagnitude = ai.ForwardForceMagnitude;
-        ai.MovePlayer(forwardForceMagnitude );
+        for (int i = 0; i < 10; i++)
+        {
+            ai.MovePlayer(forwardForceMagnitude);
+        }
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class AIController : MonoBehaviour
     {
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Vector2 targetPos = collision.transform.position;
         Vector2 curPos = ai.transform.position;
