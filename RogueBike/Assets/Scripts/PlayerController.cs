@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private float currVelocity;
     private Vector2 currAcceleration;
-    private float tireRotationFromBody = 20.0f;
+    private float tireRotationFromBody = 0.0f;
     private bool tireRotatedLastFrame = false;
 
     //Card to turn
@@ -48,18 +48,19 @@ public class PlayerController : MonoBehaviour
     public void CheckForInput() {
         tireRotatedLastFrame = false;
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            RotatePlayer(rotationalSpeed * Time.deltaTime);
-            tireRotatedLastFrame = true;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            RotatePlayer(-rotationalSpeed * Time.deltaTime);
-            tireRotatedLastFrame = true;
-        }
         if (Input.GetKey(KeyCode.W))
         {
+            if (Input.GetKey(KeyCode.A))
+            {
+                RotatePlayer(rotationalSpeed * Time.deltaTime);
+                tireRotatedLastFrame = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                RotatePlayer(-rotationalSpeed * Time.deltaTime);
+                tireRotatedLastFrame = true;
+            }
+
             MovePlayer(forwardForceMagnitude * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
@@ -67,7 +68,22 @@ public class PlayerController : MonoBehaviour
             MovePlayer(brakeForceMagnitude * Time.deltaTime);
         }
 
-        handleBars.transform.rotation = frontTire.transform.rotation;
+
+        if (/*!tireRotatedLastFrame && */tireRotationFromBody != 0)
+        {
+            if (Mathf.Abs(tireRotationFromBody) <= 0)
+            {
+                tireRotationFromBody = 0;
+                frontTire.transform.rotation = Quaternion.Euler(frontTire.transform.forward * (rotationalSpeed * Time.deltaTime) * -Mathf.Sign(tireRotationFromBody) + frontTire.transform.eulerAngles);
+            }
+            else
+            {
+                tireRotationFromBody += rotationalSpeed * Time.deltaTime * -Mathf.Sign(tireRotationFromBody);
+                frontTire.transform.rotation = Quaternion.Euler(frontTire.transform.forward * (rotationalSpeed * Time.deltaTime) * -Mathf.Sign(tireRotationFromBody) + frontTire.transform.eulerAngles);
+            }
+
+            handleBars.transform.rotation = frontTire.transform.rotation;
+        }
 
         ////can only play cards if paused
         //if (Time.timeScale < 1)
@@ -93,19 +109,6 @@ public class PlayerController : MonoBehaviour
         if (currVelocity > MAX_VELOCITY_MAG)
         {
             rb.velocity = MAX_VELOCITY_MAG * frontTire.transform.forward;
-        }
-
-        if (!tireRotatedLastFrame)
-        {
-            if (Mathf.Abs(tireRotationFromBody) <= 0)
-            {
-                tireRotationFromBody = 0;
-            }
-            else
-            {
-                tireRotationFromBody += rotationalSpeed * Time.deltaTime * -Mathf.Sign(tireRotationFromBody);
-                frontTire.transform.rotation = Quaternion.Euler(frontTire.transform.forward * (rotationalSpeed * Time.deltaTime) * -Mathf.Sign(tireRotationFromBody) + frontTire.transform.eulerAngles);
-            }
         }
     }
 
