@@ -22,6 +22,25 @@ public class PlayerController : MonoBehaviour
     private float currVelocity;
     private Vector2 currAcceleration;
 
+    /// <summary>
+    /// Get rotation speed
+    /// </summary>
+    public float RotationalSpeed
+    {
+        get
+        {
+            return rotationalSpeed;
+        }
+    }
+
+    public float ForwardForceMagnitude
+    {
+        get
+        {
+            return forwardForceMagnitude;
+        }
+    }
+
     //Card to turn
     //[SerializeField]
     //private List<GameObject> cards;
@@ -73,7 +92,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void MovePlayer(float force)
+    public void MovePlayer(float force)
     {
         rb.AddForce(force * player.transform.up);
         currVelocity = rb.velocity.magnitude;

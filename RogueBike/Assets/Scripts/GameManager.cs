@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     private PlayerController playerController;
 
+    [SerializeField]
+    private GameObject ai;
+    private AIController aiController;
+
     //Card to turn
     [SerializeField]
     private List<GameObject> cards = new List<GameObject>();
@@ -30,6 +34,8 @@ public class GameManager : MonoBehaviour
         leftTurnCard_TEMP.SetActive(false);
 
         playerController = player.GetComponent<PlayerController>();
+        aiController = ai.GetComponent<AIController>();
+
         for (int i = 0; i < cards.Count; i++)
         {
             Debug.Log(cards[i].name);
@@ -41,6 +47,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         playerController.CheckForInput();
+        //aiController.Update();
 
         //slow down time i.e. 'pause'
         if (Input.GetKeyDown(KeyCode.Space))
