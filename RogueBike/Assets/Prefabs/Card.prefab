@@ -130,6 +130,9 @@ MonoBehaviour:
   backgroundImage: {fileID: 8642217426377125728}
   titleText: {fileID: 2641736445439811178}
   descriptionText: {fileID: 2379863735498494899}
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8170108851545335308
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,8 +200,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: (Desc)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ac961741c850e94dabf68042ab3dfd1, type: 2}
+  m_sharedMaterial: {fileID: -6840017379966176326, guid: 1ac961741c850e94dabf68042ab3dfd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -222,8 +225,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -331,8 +334,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: (Temp)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ac961741c850e94dabf68042ab3dfd1, type: 2}
+  m_sharedMaterial: {fileID: -6840017379966176326, guid: 1ac961741c850e94dabf68042ab3dfd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -356,8 +359,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
