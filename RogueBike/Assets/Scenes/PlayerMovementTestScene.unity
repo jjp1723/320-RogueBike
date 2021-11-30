@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 363731766}
-  ai: {fileID: 0}
+  ai: {fileID: 128479860}
   cards:
   - {fileID: 4784801905279629888, guid: 62afe881320b1954cbf7a1b0816d6794, type: 3}
   - {fileID: 4784801905279629888, guid: ecac7fb98a80612439062d73cad40df7, type: 3}

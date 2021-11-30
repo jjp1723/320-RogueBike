@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private GameObject player;
+    private GameObject frontTire;
+    private GameObject handleBars;
     private Rigidbody2D rb;
 
     [SerializeField]
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     private float currVelocity;
     private Vector2 currAcceleration;
+    private float tireRotationFromBody = 0.0f;
+    private bool tireRotatedLastFrame = false;
 
     public float RotationalSpeed
     {
@@ -52,25 +56,49 @@ public class PlayerController : MonoBehaviour
         //    Debug.Log(cards[i].name);
         //    turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
         //}
+
+        frontTire = player.transform.Find("Tire Front").gameObject;
+        handleBars = player.transform.Find("Handlebars").gameObject;
     }
 
     public void CheckForInput() {
-        //Debug.Log(rb.velocity);
-        if (Input.GetKey(KeyCode.A))
-        {
-            RotatePlayer(rotationalSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            RotatePlayer(-rotationalSpeed * Time.deltaTime);
-        }
+        tireRotatedLastFrame = false;
+
         if (Input.GetKey(KeyCode.W))
         {
+            if (Input.GetKey(KeyCode.A))
+            {
+                RotatePlayer(rotationalSpeed * Time.deltaTime);
+                tireRotatedLastFrame = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                RotatePlayer(-rotationalSpeed * Time.deltaTime);
+                tireRotatedLastFrame = true;
+            }
+
             MovePlayer(forwardForceMagnitude * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
             MovePlayer(brakeForceMagnitude * Time.deltaTime);
+        }
+
+
+        if (/*!tireRotatedLastFrame && */tireRotationFromBody != 0)
+        {
+            if (Mathf.Abs(tireRotationFromBody) <= 0)
+            {
+                tireRotationFromBody = 0;
+                frontTire.transform.rotation = Quaternion.Euler(frontTire.transform.forward * (rotationalSpeed * Time.deltaTime) * -Mathf.Sign(tireRotationFromBody) + frontTire.transform.eulerAngles);
+            }
+            else
+            {
+                tireRotationFromBody += rotationalSpeed * Time.deltaTime * -Mathf.Sign(tireRotationFromBody);
+                frontTire.transform.rotation = Quaternion.Euler(frontTire.transform.forward * (rotationalSpeed * Time.deltaTime) * -Mathf.Sign(tireRotationFromBody) + frontTire.transform.eulerAngles);
+            }
+
+            handleBars.transform.rotation = frontTire.transform.rotation;
         }
 
         ////can only play cards if paused
@@ -91,18 +119,23 @@ public class PlayerController : MonoBehaviour
 
     public void MovePlayer(float force)
     {
-        rb.AddForce(force * player.transform.up);
+        rb.AddForce(force * frontTire.transform.up);
         currVelocity = rb.velocity.magnitude;
 
         if (currVelocity > MAX_VELOCITY_MAG)
         {
-            rb.velocity = MAX_VELOCITY_MAG * player.transform.forward;
+            rb.velocity = MAX_VELOCITY_MAG * frontTire.transform.forward;
         }
     }
 
     public void RotatePlayer(float rotation)
     {
-        player.transform.rotation = Quaternion.Euler(player.transform.forward * rotation + player.transform.eulerAngles);
+        if (rb.velocity != Vector2.zero)
+        {
+            player.transform.rotation = Quaternion.Euler(player.transform.forward * rotation + player.transform.eulerAngles);
+            frontTire.transform.rotation = Quaternion.Euler(player.transform.forward * (rotation + 20 * Mathf.Sign(rotation)) + player.transform.eulerAngles);
+            tireRotationFromBody = 20.0f * Mathf.Sign(rotation);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collider)
