@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4251510771" Language="SFX" Hash="1210296501">
+		<SoundBank Id="4251510771" Language="SFX" Hash="3321043024">
 			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
 			<ShortName>UnitySoundBank</ShortName>
 			<Path>UnitySoundBank.bnk</Path>
@@ -83,6 +83,10 @@
 					<ShortName>intro.wav</ShortName>
 					<Path>SFX\intro_10C4C929.wem</Path>
 				</File>
+				<File Id="130631985" Language="SFX">
+					<ShortName>menuButton.wav</ShortName>
+					<Path>SFX\menuButton_D79FB2B7.wem</Path>
+				</File>
 				<File Id="241615685" Language="SFX">
 					<ShortName>raceStartSFX.wav</ShortName>
 					<Path>SFX\raceStartSFX_D79FB2B7.wem</Path>
@@ -98,6 +102,10 @@
 				<File Id="316690257" Language="SFX">
 					<ShortName>introLoop.wav</ShortName>
 					<Path>SFX\introLoop_D79FB2B7.wem</Path>
+				</File>
+				<File Id="667994561" Language="SFX">
+					<ShortName>cardUse.wav</ShortName>
+					<Path>SFX\cardUse_D79FB2B7.wem</Path>
 				</File>
 				<File Id="787154511" Language="SFX">
 					<ShortName>winRaceSFX.wav</ShortName>
