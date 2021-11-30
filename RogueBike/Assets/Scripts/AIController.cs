@@ -15,15 +15,13 @@ public class AIController : MonoBehaviour
     {
         rotationalSpeed = ai.RotationalSpeed;
         forwardForceMagnitude = ai.ForwardForceMagnitude;
-        for (int i = 0; i < 10; i++)
-        {
-            ai.MovePlayer(forwardForceMagnitude);
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        ai.MovePlayer(forwardForceMagnitude * Time.deltaTime);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -45,12 +43,12 @@ public class AIController : MonoBehaviour
         //target is above and to left of ai
         else if (targetPos.x < curPos.x && targetPos.y > curPos.y)
         {
-            ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+            ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         }
         //target is above and to right of ai so turn right (away)
         else if (targetPos.x > curPos.x && targetPos.y > curPos.y)
         {
-            ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+            ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
         }
     }
 
