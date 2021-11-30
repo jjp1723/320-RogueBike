@@ -63,70 +63,14 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="raceStart_SFX" ID="{3D28537E-D66E-4F27-AC08-384B706C9445}">
+				<Event Name="Set_State_end" ID="{0DD8E3AD-5387-44B8-BED5-AC644B4A5B3E}">
 					<ChildrenList>
-						<Action Name="" ID="{84E4C171-E259-4725-AC6A-109EE6A5A373}" ShortID="962551520">
+						<Action Name="" ID="{F2A509D1-0FBC-40FE-89E6-08701BFF2C56}" ShortID="675559855">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
-						</Action>
-						<Action Name="" ID="{F6BE8A69-A944-4520-840C-1EFF147643C2}" ShortID="1049670367">
-							<PropertyList>
-								<Property Name="FadeInCurve" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="raceStartSFX" ID="{8FC11730-11D3-4BA7-8545-440E2B511D56}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{B363640F-EC09-42FE-A496-C20F89A6D06B}" ShortID="750764828">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="4"/>
-								<Property Name="FadeTime" Type="Real64" Value="4"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mainLoop" ID="{3A594B38-D386-4D49-AF29-F2DB8E153C5B}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="menu" ID="{F15AFBB2-3C7A-4B7A-8EB9-382A101C6C94}">
-					<ChildrenList>
-						<Action Name="" ID="{87138AD6-F548-4A79-B650-DDD5D99C4E3D}" ShortID="221565919">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MenuSequence" ID="{756B427D-4680-45BF-9E23-BFA6A0D835ED}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_State_end" ID="{0DD8E3AD-5387-44B8-BED5-AC644B4A5B3E}">
-					<ChildrenList>
-						<Action Name="" ID="{F2A509D1-0FBC-40FE-89E6-08701BFF2C56}" ShortID="675559855">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="LoopSequence" ID="{B5984944-A58A-48C0-9C41-C35A5F970F44}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{A26C868C-6185-43D8-AB0D-ACE2617E7C50}" ShortID="868643917">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="end" ID="{9787BE76-FC07-4434-B8E6-407F6839211B}" WorkUnitID="{1D6E3B8F-448D-4359-9299-130542F81D32}"/>
-								</Reference>
-							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{8DF0635A-5F8A-4C16-B886-9874B002C32B}" ShortID="233942295">
 							<ReferenceList>
@@ -141,23 +85,10 @@
 					<ChildrenList>
 						<Action Name="" ID="{734D1264-A6CD-4961-811B-CF5C47D19F9C}" ShortID="748348078">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MenuSequence" ID="{756B427D-4680-45BF-9E23-BFA6A0D835ED}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{2066330F-B6B2-4423-A976-6C138EB6AB3D}" ShortID="45757056">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="game" ID="{975EDD60-1F38-4E6B-AF57-220B4CE4CF9F}" WorkUnitID="{1D6E3B8F-448D-4359-9299-130542F81D32}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Action>
 						<Action Name="" ID="{01034514-91B4-45C9-BA06-0242E3DADFC1}" ShortID="950319063">
 							<ReferenceList>
@@ -170,11 +101,11 @@
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="4"/>
 								<Property Name="FadeInCurve" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="mainLoop" ID="{DA276770-3983-4954-8692-C54B0FAED2D0}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
+									<ObjectRef Name="mainLoop" ID="{3A594B38-D386-4D49-AF29-F2DB8E153C5B}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -184,23 +115,10 @@
 					<ChildrenList>
 						<Action Name="" ID="{9FCFB05B-4B77-451D-96C2-68B56F0D06C7}" ShortID="53422895">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{C728247B-07F6-46A5-AB1F-61C6526EEEAB}" ShortID="679044601">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="menu" ID="{374877D0-A71F-49BD-8E5A-ADD6CB31B53B}" WorkUnitID="{1D6E3B8F-448D-4359-9299-130542F81D32}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Action>
 						<Action Name="" ID="{9C6E4A62-9BC1-449F-B229-ECD59C078DC5}" ShortID="60174383">
 							<ReferenceList>
