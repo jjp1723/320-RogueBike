@@ -22,9 +22,6 @@ public class PlayerController : MonoBehaviour
     private float currVelocity;
     private Vector2 currAcceleration;
 
-    /// <summary>
-    /// Get rotation speed
-    /// </summary>
     public float RotationalSpeed
     {
         get
