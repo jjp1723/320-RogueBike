@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 363731766}
+  ai: {fileID: 0}
   cards:
   - {fileID: 4784801905279629888, guid: 62afe881320b1954cbf7a1b0816d6794, type: 3}
   - {fileID: 4784801905279629888, guid: ecac7fb98a80612439062d73cad40df7, type: 3}
@@ -353,7 +354,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3a276f85e5961e64ca517e01baacc199, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 25eeaec1d1727e3488dea227e6e24059, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
