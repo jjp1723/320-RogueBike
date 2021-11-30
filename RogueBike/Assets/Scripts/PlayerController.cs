@@ -26,6 +26,22 @@ public class PlayerController : MonoBehaviour
     private float tireRotationFromBody = 0.0f;
     private bool tireRotatedLastFrame = false;
 
+    public float RotationalSpeed
+    {
+        get
+        {
+            return rotationalSpeed;
+        }
+    }
+
+    public float ForwardForceMagnitude
+    {
+        get
+        {
+            return forwardForceMagnitude;
+        }
+    }
+
     //Card to turn
     //[SerializeField]
     //private List<GameObject> cards;
