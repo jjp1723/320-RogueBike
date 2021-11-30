@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585633052411238875
+    m_lastTime: -8585633044219962376
     List:
     - name: lose_SFX
       guid: eba41798146a7c4f957d54339e6e7361
@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8f3b6e1d8d4459439299130542f81d32
     GuidInternal: 
-    m_lastTime: -8585633074564132013
+    m_lastTime: -8585633044216441764
     List:
     - name: stateGroup
       guid: e15ab6d8aff3dc48aa3e2b5aa76aadab
