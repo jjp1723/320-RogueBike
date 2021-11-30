@@ -8,7 +8,6 @@
 						<State Name="None" ID="{DD471A59-1CE9-4FD5-96D1-6FBFA8F77EF9}"/>
 						<State Name="menu" ID="{374877D0-A71F-49BD-8E5A-ADD6CB31B53B}"/>
 						<State Name="game" ID="{975EDD60-1F38-4E6B-AF57-220B4CE4CF9F}"/>
-						<State Name="end" ID="{9787BE76-FC07-4434-B8E6-407F6839211B}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
