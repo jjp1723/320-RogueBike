@@ -20,6 +20,8 @@ public class AIController : MonoBehaviour
     private Vector2 curPos;
     private Vector2 targetPos;
 
+    private float angle; ///<difference between current direction and target direction
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class AIController : MonoBehaviour
     void Update()
     {
         ai.MovePlayer(forwardForceMagnitude * Time.deltaTime);
+        UpdateDir();
 
         float radius = nodes[curNode].transform.localScale.x;
         if ((Mathf.Pow(curPos.x - targetPos.x, 2) + Mathf.Pow(curPos.y - targetPos.y, 2)) <= Mathf.Pow(radius + ai.transform.localScale.x, 2))
@@ -48,25 +51,54 @@ public class AIController : MonoBehaviour
             {
                 curNode = 0;
             }
+            UpdateDir();
+            Vector2 curDir = ai.transform.up;
+            angle = Vector3.Angle(curDir, targetDir);
         }
 
-        UpdateDir();
 
         float rotate = Mathf.Min(rotationalSpeed, Vector2.Angle(targetDir, ai.transform.up));
         //Debug.Log("rotate" + rotate);
         //ai.RotatePlayer(rotate * Time.deltaTime);
-        Vector2 curDir = ai.transform.up;
         //target is below and to right of ai so turn left (away)
 
+
+        if (angle < 0)
+        {
+            if (ai.transform.up.y > 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+                angle += rotationalSpeed * Time.deltaTime;
+            }
+            else if(ai.transform.up.y < 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+                angle += -1 * rotationalSpeed * Time.deltaTime;
+            }
+        }
+        else if (angle > 0)
+        {
+            if (ai.transform.up.y > 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+                angle += -1 * rotationalSpeed * Time.deltaTime;
+            }
+            else if (ai.transform.up.y < 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+                angle += rotationalSpeed * Time.deltaTime;
+            }
+        }
+
         //it's current direction is more to the right than it should so turn left
-        if(targetDir.x > curDir.x)
-        {
-            ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        }
-        if(targetDir.x < curDir.x)
-        {
-            ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        }
+        //if(targetDir.x > curDir.x)
+        //{
+        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+        //}
+        //if(targetDir.x < curDir.x)
+        //{
+        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+        //}
         //else if(targetDir.y > curDir.y)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
