@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d4ef729d7384ba4a86baa164ada2cbe, type: 3}
-  m_Name: LeftTurnCard
+  m_Name: RightTurnCard
   m_EditorClassIdentifier: 
-  title: Turn left
-  description: Use this card to turn 90 degrees left
-  background: {fileID: 21300000, guid: ab5db1b0f85a33b499e3b1b182ec87fe, type: 3}
+  title: Turn Right
+  description: Use this card to turn 90 degrees right
+  background: {fileID: 21300000, guid: a1a00acc1c737c945a8ccd1117ddc117, type: 3}
