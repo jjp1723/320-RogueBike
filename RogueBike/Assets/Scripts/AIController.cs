@@ -68,15 +68,77 @@ public class AIController : MonoBehaviour
         angle = Vector3.Angle(curDir, targetDir);
 
         //ai.transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
-        ai.transform.up = targetDir;
+        //ai.transform.up = targetDir;
 
         //ai.RotatePlayer(angle * Time.deltaTime);
-        //if (angle > 0)
+
+        Debug.Log("Current Direction: X" + curDir.x + " Y" + curDir.y);
+
+        //if the target direction has a negative x and the player is moving up
+        //traveling up
+        if (curDir.y > 0)
+        {
+            //target to left
+            if (targetDir.x < 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+            }
+            //target to right
+            else if(targetDir.x > 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+            }
+        }
+        //traveling right
+        else if (curDir.x > 0)
+        {
+            //target above
+            if (targetDir.y > 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+            }
+            //target below
+            else if (targetDir.y < 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+            }
+        }
+        //traveling down
+        else if(curDir.y < 0)
+        {
+            //target left
+            if (targetDir.x > 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+            }
+            //target right
+            else if(targetDir.x < 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+            }
+        }
+        //traveling left
+        else if(curDir.x < 0)
+        {
+            //target above
+            if(targetDir.y > 0)
+            {
+                ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
+            }
+            //target below
+            else if(targetDir.y < 0)
+            {
+                ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
+            }
+        }
+        
+        
+        //if (angle > 90)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         //    //angle += rotationalSpeed * Time.deltaTime;
         //}
-        //else if (angle < 0)
+        //else if (angle < 90)
         //{
         //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
         //    //angle += -1 * rotationalSpeed * Time.deltaTime;
@@ -96,39 +158,41 @@ public class AIController : MonoBehaviour
         //}
 
         //it's current direction is more to the right than it should so turn left
-        //if (targetDir.x > curDir.x)
+        //if (targetDir.x > 0)
         //{
         //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
         //}
-        //else if (targetDir.x < curDir.x)
+        //else if (targetDir.x < 0)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         //}
-        //else if (targetDir.y > curDir.y)
+        //else if (targetDir.y > 0)
         //{
         //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
         //}
-        //else if (targetDir.y < curDir.y)
+        //else if (targetDir.y < 0)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         //}
-        //if (targetDir.x < curDir.x && targetDir.y < curDir.y)
+
+
+        //if (targetDir.x < 0 && targetDir.y < 0)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         //}
         ////target is below and to left of ai
-        //else if (targetDir.x > curDir.x && targetDir.y < curDir.y)
+        //else if (targetDir.x > 0 && targetDir.y < 0)
         //{
         //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
 
         //}
         ////target is above and to left of ai
-        //else if (targetDir.x < curDir.x && targetDir.y > curDir.y)
+        //else if (targetDir.x < 0 && targetDir.y > 0)
         //{
         //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
         //}
         ////target is above and to right of ai so turn right (away)
-        //else if (targetDir.x > curDir.x && targetDir.y > curDir.y)
+        //else if (targetDir.x > 0 && targetDir.y > 0)
         //{
         //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         //}
