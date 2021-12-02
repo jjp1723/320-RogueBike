@@ -64,19 +64,18 @@ public class PlayerController : MonoBehaviour
     public void CheckForInput() {
         tireRotatedLastFrame = false;
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            RotatePlayer(rotationalSpeed * Time.deltaTime);
+            tireRotatedLastFrame = true;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            RotatePlayer(-rotationalSpeed * Time.deltaTime);
+            tireRotatedLastFrame = true;
+        }
         if (Input.GetKey(KeyCode.W))
         {
-            if (Input.GetKey(KeyCode.A))
-            {
-                RotatePlayer(rotationalSpeed * Time.deltaTime);
-                tireRotatedLastFrame = true;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                RotatePlayer(-rotationalSpeed * Time.deltaTime);
-                tireRotatedLastFrame = true;
-            }
-
             MovePlayer(forwardForceMagnitude * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
@@ -133,8 +132,19 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity != Vector2.zero)
         {
             player.transform.rotation = Quaternion.Euler(player.transform.forward * rotation + player.transform.eulerAngles);
-            frontTire.transform.rotation = Quaternion.Euler(player.transform.forward * (rotation + 20 * Mathf.Sign(rotation)) + player.transform.eulerAngles);
-            tireRotationFromBody = 20.0f * Mathf.Sign(rotation);
+            
+            if (tireRotationFromBody > 20 && Mathf.Sign(rotation) > 0)
+            {
+                tireRotationFromBody = 20.0f;
+            }
+            else if (tireRotationFromBody < -20 && Mathf.Sign(rotation) < 0)
+            {
+                tireRotationFromBody = -20.0f;
+            }
+
+            tireRotationFromBody += rotationalSpeed * 2 * Time.deltaTime * Mathf.Sign(rotation);
+
+            frontTire.transform.rotation = Quaternion.Euler(player.transform.forward * (rotation + tireRotationFromBody) + player.transform.eulerAngles);
         }
     }
 

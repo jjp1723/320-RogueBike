@@ -846,10 +846,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc74f9ac9614c408e84e5b0456f69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForceMagnitude: 2000
+  forwardForceMagnitude: 2500
   brakeForceMagnitude: 500
-  rotationalSpeed: 120
-  MAX_VELOCITY_MAG: 1500
+  rotationalSpeed: 100
+  MAX_VELOCITY_MAG: 1100
   MAX_ACCELERATION_MAG: 1000
 --- !u!50 &363731771
 Rigidbody2D:
@@ -864,8 +864,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 4
-  m_LinearDrag: 2
-  m_AngularDrag: 50
+  m_LinearDrag: 1
+  m_AngularDrag: 2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
