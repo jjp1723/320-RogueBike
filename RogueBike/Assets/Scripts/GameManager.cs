@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
 
         cards.Add(rightTurnCard);
 
+        //playerController = player.GetComponent<PlayerController>();
         playerController = player.GetComponent<PlayerController>();
         aiController = ai.GetComponent<AIController>();
 
