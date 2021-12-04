@@ -83,6 +83,11 @@
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -92,13 +97,49 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="mainLoop" ID="{6C00D4DE-0395-4607-B98E-3BDCD71BB4E3}" ShortID="1013922219">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mainLoop" ID="{C6E4814E-C8AB-48A4-A93F-3408F578FE37}">
+									<Language>SFX</Language>
+									<AudioFile>mainLoop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="258084987"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="mainLoop" ID="{C6E4814E-C8AB-48A4-A93F-3408F578FE37}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 					<ObjectLists/>
+					<Playlist>
+						<ItemRef Name="mainLoop" ID="{6C00D4DE-0395-4607-B98E-3BDCD71BB4E3}"/>
+					</Playlist>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" ShortID="278600950">
 					<PropertyList>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -110,6 +151,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="endLoop" ID="{8FB59F4D-89A3-461A-8DD4-D1EAB986B983}" ShortID="2447178">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>

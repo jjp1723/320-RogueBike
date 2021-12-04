@@ -10,10 +10,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	14557926	intro	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\intro_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuSequence\intro		1820968
-	130631985	menuButton	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\menuButton_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\menuSFX\menuButton		16674
+	130631985	menuButton	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\menuButton_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\menuContainer\menuSFX\menuButton		16674
 	241615685	raceStartSFX	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\raceStartSFX_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\raceStartSFX\raceStartSFX		910516
-	245698847	endLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\endLoop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EndSequence\endLoop		2503808
-	258084987	mainLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\mainLoop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\mainLoop\mainLoop		16843420
+	245698847	endLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\endLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\EndSequence\endLoop		2503808
+	258084987	mainLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\mainLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoopSequence\mainLoop		16843420
 	316690257	introLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\introLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuSequence\introLoop		5918000
 	667994561	cardUse	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\cardUse_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\cardSFX\cardUse		29028
 	787154511	winRaceSFX	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\winRaceSFX_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\winSFX\winRaceSFX		910516

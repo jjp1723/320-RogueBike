@@ -72,10 +72,10 @@
 							</PropertyList>
 							<ReferenceList/>
 						</Action>
-						<Action Name="" ID="{8DF0635A-5F8A-4C16-B886-9874B002C32B}" ShortID="233942295">
+						<Action Name="" ID="{4212E5F8-9B99-45A1-8E0F-A85C47BBFEBC}" ShortID="971494563">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="endLoop" ID="{8FB59F4D-89A3-461A-8DD4-D1EAB986B983}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
+									<ObjectRef Name="EndSequence" ID="{B5467F3A-C77D-4A64-9560-9F8AD0B0DFD9}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -97,7 +97,7 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{48E3B094-A199-4F01-A7B9-62C09C70C735}" ShortID="357796842">
+						<Action Name="" ID="{974BDC70-106F-447D-A1C1-984102FE0086}" ShortID="963783443">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="4"/>
 								<Property Name="FadeInCurve" Type="int16" Value="2"/>
@@ -105,7 +105,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="mainLoop" ID="{3A594B38-D386-4D49-AF29-F2DB8E153C5B}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+									<ObjectRef Name="LoopSequence" ID="{B5984944-A58A-48C0-9C41-C35A5F970F44}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -120,7 +120,7 @@
 							</PropertyList>
 							<ReferenceList/>
 						</Action>
-						<Action Name="" ID="{9C6E4A62-9BC1-449F-B229-ECD59C078DC5}" ShortID="60174383">
+						<Action Name="" ID="{09E51E6A-A071-46CA-A833-1BE132EC4AF6}" ShortID="17974999">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="MenuSequence" ID="{756B427D-4680-45BF-9E23-BFA6A0D835ED}" WorkUnitID="{84E80C4B-06A0-4596-A08D-725ACDE3BBF0}"/>

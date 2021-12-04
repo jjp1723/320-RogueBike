@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4251510771" Language="SFX" Hash="3321043024">
+		<SoundBank Id="4251510771" Language="SFX" Hash="2467989612">
 			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
 			<ShortName>UnitySoundBank</ShortName>
 			<Path>UnitySoundBank.bnk</Path>
@@ -25,7 +25,7 @@
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
 							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
 						</File>
 						<File Id="1029459887" Language="SFX">
 							<ShortName>loseRaceSFX.wav</ShortName>
@@ -33,15 +33,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2300403011" Name="Set_State_end" ObjectPath="\Events\Default Work Unit\Set_State_end" DurationType="OneShot" DurationMin="14.193560" DurationMax="14.193560">
+				<Event Id="2300403011" Name="Set_State_end" ObjectPath="\Events\Default Work Unit\Set_State_end" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
 							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4207344442" Name="Set_State_game" ObjectPath="\Events\Default Work Unit\Set_State_game" DurationType="OneShot" DurationMin="99.483871" DurationMax="99.483871">
+				<Event Id="4207344442" Name="Set_State_game" ObjectPath="\Events\Default Work Unit\Set_State_game" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="241615685" Language="SFX">
 							<ShortName>raceStartSFX.wav</ShortName>
@@ -69,7 +69,7 @@
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
 							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
 						</File>
 						<File Id="787154511" Language="SFX">
 							<ShortName>winRaceSFX.wav</ShortName>
@@ -93,7 +93,7 @@
 				</File>
 				<File Id="245698847" Language="SFX">
 					<ShortName>endLoop.wav</ShortName>
-					<Path>SFX\endLoop_10C4C929.wem</Path>
+					<Path>SFX\endLoop_D79FB2B7.wem</Path>
 				</File>
 				<File Id="258084987" Language="SFX">
 					<ShortName>mainLoop.wav</ShortName>
