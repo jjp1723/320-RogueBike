@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 7566117278781003870}
   - component: {fileID: 574019312565380534}
   m_Layer: 0
-  m_Name: Long Obstacle
+  m_Name: Long Obstacle 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
