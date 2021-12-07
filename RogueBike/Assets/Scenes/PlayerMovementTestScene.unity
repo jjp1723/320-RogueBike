@@ -2113,6 +2113,7 @@ MonoBehaviour:
   timerText: {fileID: 515595664}
   lapCounter: {fileID: 1739854493}
   countInText: {fileID: 322051985}
+  hsManager: {fileID: 0}
 --- !u!114 &136313825
 MonoBehaviour:
   m_ObjectHideFlags: 0

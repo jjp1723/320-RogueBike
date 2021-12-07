@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TMP_Text countInText;
 
+    [SerializeField]
+    private HighScoreManager hsManager;
+
     //private List<GameObject> shownCards = new List<GameObject>();
 
     //[SerializeField]
@@ -98,9 +101,15 @@ public class GameManager : MonoBehaviour
             countInText.gameObject.SetActive(false);
         }
 
-        //Player has hit the last lap
-        if (playerController.Lap - 1 == playerController.MaxLap || aiPlayerController.Lap - 1 == aiPlayerController.MaxLap)
+        if(aiPlayerController.Lap - 1 == aiPlayerController.MaxLap)
         {
+            PlayerPrefs.SetFloat("AITime", time);
+        }
+        //Player has hit the last lap
+        if (playerController.Lap - 1 == playerController.MaxLap /*|| aiPlayerController.Lap - 1 == aiPlayerController.MaxLap*/)
+        {
+
+            PlayerPrefs.SetFloat("PlayerTime", time);
             SceneManager.LoadScene(2);
         }
         
