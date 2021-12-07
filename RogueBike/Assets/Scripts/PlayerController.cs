@@ -89,7 +89,15 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            MovePlayer(brakeForceMagnitude * Time.deltaTime);
+            if (rb.velocity != Vector2.zero)
+            {
+                MovePlayer(-brakeForceMagnitude * Time.deltaTime);
+            }
+
+            if (rb.velocity.magnitude < 2.0f)
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
 
 
