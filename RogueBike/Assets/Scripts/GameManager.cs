@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
         //}
 
         time = -3.0f;
+
     }
 
     // Update is called once per frame
