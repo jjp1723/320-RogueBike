@@ -11,6 +11,7 @@ public class AIController : MonoBehaviour
     private float forwardForceMagnitude;
 
     [SerializeField]
+    private GameObject nodeParent;
     private GameObject[] nodes;
     private int curNode;
 
@@ -33,6 +34,14 @@ public class AIController : MonoBehaviour
         forwardForceMagnitude = ai.ForwardForceMagnitude;
 
         curNode = 0;
+
+        int childLength = nodeParent.transform.childCount;
+
+        nodes = new GameObject[childLength];
+
+        for (int i = 0; i < childLength; i++) {
+            nodes[i] = nodeParent.gameObject.transform.GetChild(i).gameObject;
+        }
 
         radius = ai.GetComponent<CircleCollider2D>().radius;
 
@@ -85,159 +94,6 @@ public class AIController : MonoBehaviour
             ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
         }
       
-        //ai.transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
-        //ai.transform.up = targetDir;
-
-
-        Debug.Log("Current Direction: X" + curDir.x + " Y" + curDir.y);
-
-        //check curdirection against target direction
-
-
-        //check difference between current and target direction and turn based on that
-        //float xDiff = targetDir.x - curDir.x;
-        //float yDiff = targetDir.y - curDir.y;
-
-
-        //if (xDiff > 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //}
-        //else if(xDiff < 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
-        //else if(yDiff > 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
-        //else if(yDiff < 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //}
-
-        //if the target direction has a negative x and the player is moving up
-        //traveling up
-        //if (curDir.y > 0)
-        //{
-        //    //target to left
-        //    if (targetDir.x < 0)
-        //    {
-        //        ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //    }
-        //    //target to right
-        //    else if (targetDir.x > 0)
-        //    {
-        //        ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //    }
-        //}
-        ////traveling right
-        //if (curDir.x > 0)
-        //{
-        //    //target above
-        //    if (targetDir.y > 0)
-        //    {
-        //        ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //    }
-        //    //target below
-        //    else if (targetDir.y < 0)
-        //    {
-        //        ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //    }
-        //}
-        ////traveling down
-        //if (curDir.y < 0)
-        //{
-        //    //target left
-        //    if (targetDir.x > 0)
-        //    {
-        //        ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //    }
-        //    //target right
-        //    else if (targetDir.x < 0)
-        //    {
-        //        ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //    }
-        //}
-        ////traveling left
-        //if (curDir.x < 0)
-        //{
-        //    //target above
-        //    if (targetDir.y > 0)
-        //    {
-        //        ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //    }
-        //    //target below
-        //    else if (targetDir.y < 0)
-        //    {
-        //        ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //    }
-        //}
-
-
-        //if (angle > 90)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //    //angle += rotationalSpeed * Time.deltaTime;
-        //}
-        //else if (angle < 90)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //    //angle += -1 * rotationalSpeed * Time.deltaTime;
-        //}
-        //else if (angle > 0)
-        //{
-        //    if (ai.transform.up.y > 0)
-        //    {
-        //        ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //        angle += -1 * rotationalSpeed * Time.deltaTime;
-        //    }
-        //    else if (ai.transform.up.y < 0)
-        //    {
-        //        ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //        angle += rotationalSpeed * Time.deltaTime;
-        //    }
-        //}
-
-        //it's current direction is more to the right than it should so turn left
-        //if (targetDir.x > 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //}
-        //else if (targetDir.x < 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
-        //else if (targetDir.y > 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //}
-        //else if (targetDir.y < 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
-
-
-        //if (targetDir.x < 0 && targetDir.y < 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
-        ////target is below and to left of ai
-        //else if (targetDir.x > 0 && targetDir.y < 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-
-        //}
-        ////target is above and to left of ai
-        //else if (targetDir.x < 0 && targetDir.y > 0)
-        //{
-        //    ai.RotatePlayer(-1 * rotationalSpeed * Time.deltaTime);
-        //}
-        ////target is above and to right of ai so turn right (away)
-        //else if (targetDir.x > 0 && targetDir.y > 0)
-        //{
-        //    ai.RotatePlayer(rotationalSpeed * Time.deltaTime);
-        //}
     }
 
     private void UpdateDir()

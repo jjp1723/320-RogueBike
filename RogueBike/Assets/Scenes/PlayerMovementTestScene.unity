@@ -1884,18 +1884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: {fileID: 128479863}
-  nodes:
-  - {fileID: 109284996}
-  - {fileID: 924038717}
-  - {fileID: 1702872871}
-  - {fileID: 580346080}
-  - {fileID: 620821519}
-  - {fileID: 325543939}
-  - {fileID: 2034234921}
-  - {fileID: 1848744443}
-  - {fileID: 1488098874}
-  - {fileID: 1865344279}
-  - {fileID: 456311190}
+  nodeParent: {fileID: 752583797}
 --- !u!1 &136313822
 GameObject:
   m_ObjectHideFlags: 0
