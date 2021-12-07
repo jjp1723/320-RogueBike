@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private HighScoreManager hsManager;
 
+    private bool aiFinished = false;
     //private List<GameObject> shownCards = new List<GameObject>();
 
     //[SerializeField]
@@ -101,8 +102,9 @@ public class GameManager : MonoBehaviour
             countInText.gameObject.SetActive(false);
         }
 
-        if(aiPlayerController.Lap - 1 == aiPlayerController.MaxLap)
+        if(aiPlayerController.Lap - 1 == aiPlayerController.MaxLap && !aiFinished)
         {
+            aiFinished = true;
             PlayerPrefs.SetFloat("AITime", time);
         }
         //Player has hit the last lap
