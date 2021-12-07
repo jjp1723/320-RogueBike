@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject ai;
     private AIController aiController;
+    private PlayerController aiPlayerController;
 
     //Card to turn
     [SerializeField]
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         //playerController = player.GetComponent<PlayerController>();
         playerController = player.GetComponent<PlayerController>();
         aiController = ai.GetComponent<AIController>();
+        aiPlayerController = ai.GetComponent<PlayerController>();
 
         //for (int i = 0; i < cards.Count; i++)
         //{
@@ -64,6 +67,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Player has hit the last lap
+        if(playerController.Lap - 1 == playerController.MaxLap || aiPlayerController.Lap == aiPlayerController.MaxLap)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
         time += Time.deltaTime;
         timerText.text = "Time: " + string.Format("{0,2:00}:{1,2:00.00}", (int)time / 60, time % 60);
         lapCounter.text = "Lap " + string.Format("{0}/{1}", playerController.Lap, playerController.MaxLap);
