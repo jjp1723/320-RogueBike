@@ -89,6 +89,11 @@
 						<MusicSegment Name="loseSFX" ID="{090CC285-05C6-4D23-98D3-09C23F286C1E}" ShortID="993023881">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="5161.2925170068"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -257,6 +262,11 @@
 						<MusicSegment Name="winSFX" ID="{80B32A15-65DF-43FF-9B71-6FCA42F43A17}" ShortID="490135660">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="5161.2925170068"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -471,6 +481,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="menuSFX" ID="{15BA3D97-1EBD-4A61-905A-44147689E89A}" ShortID="30651887">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>

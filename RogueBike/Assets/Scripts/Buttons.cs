@@ -21,4 +21,11 @@ public class Buttons : MonoBehaviour
     {
         Application.Quit();
     }
+
+    //Interactable sound
+
+    public void OnHover()
+    {
+        AkSoundEngine.PostEvent("menu_hover", gameObject);
+    }
 }

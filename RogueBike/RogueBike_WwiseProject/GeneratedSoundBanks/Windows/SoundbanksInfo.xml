@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4251510771" Language="SFX" Hash="2467989612">
+		<SoundBank Id="4251510771" Language="SFX" Hash="1329695601">
 			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
 			<ShortName>UnitySoundBank</ShortName>
 			<Path>UnitySoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="659043495" Name="card_use" ObjectPath="\Events\Default Work Unit\card_use" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="667994561" Language="SFX">
+							<ShortName>cardUse.wav</ShortName>
+							<Path>SFX\cardUse_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2894173942" Name="lose_SFX" ObjectPath="\Events\Default Work Unit\lose_SFX" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
@@ -30,6 +38,14 @@
 						<File Id="1029459887" Language="SFX">
 							<ShortName>loseRaceSFX.wav</ShortName>
 							<Path>SFX\loseRaceSFX_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="309439191" Name="menu_hover" ObjectPath="\Events\Default Work Unit\menu_hover" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="130631985" Language="SFX">
+							<ShortName>menuButton.wav</ShortName>
+							<Path>SFX\menuButton_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

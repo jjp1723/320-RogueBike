@@ -129,6 +129,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="menu_hover" ID="{8A4E03A1-5D0D-4EF9-89BC-CBF2EADE3CEB}">
+					<ChildrenList>
+						<Action Name="" ID="{00A57688-4F99-4E14-8205-3F94071B030E}" ShortID="280596671">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menuSFX" ID="{15BA3D97-1EBD-4A61-905A-44147689E89A}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="card_use" ID="{AE5808E8-1F7D-4626-82F4-E70C53AFFFC2}">
+					<ChildrenList>
+						<Action Name="" ID="{AB66D428-7216-4CCD-B619-7308AFA3392A}" ShortID="454394158">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cardSFX" ID="{A59994A7-8581-44A6-89F2-C81E754FA822}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

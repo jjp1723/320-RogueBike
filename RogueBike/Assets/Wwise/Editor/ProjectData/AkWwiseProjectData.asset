@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585630229159733919
+    m_lastTime: -8585626932779547279
     List:
+    - name: card_use
+      guid: e80858ae7d1f264682f4e70c53afffc2
+      id: 659043495
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: card_use
+        ObjectType: 3
+        guid: e80858ae7d1f264682f4e70c53afffc2
+      Path: Events\Default Work Unit\card_use
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: lose_SFX
       guid: eba41798146a7c4f957d54339e6e7361
       id: 2894173942
@@ -113,6 +130,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: menu_hover
+      guid: a1034e8a0d5df94e89bccbf2eade3ceb
+      id: 309439191
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: menu_hover
+        ObjectType: 3
+        guid: a1034e8a0d5df94e89bccbf2eade3ceb
+      Path: Events\Default Work Unit\menu_hover
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Set_State_end
       guid: ade3d80d8753b844bed5ac644b4a5b3e
       id: 2300403011
@@ -304,7 +338,7 @@ MonoBehaviour:
     m_lastTime: -8585645211522529429
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

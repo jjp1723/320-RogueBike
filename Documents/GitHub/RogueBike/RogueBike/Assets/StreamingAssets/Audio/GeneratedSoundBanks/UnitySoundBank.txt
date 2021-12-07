@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	309439191	menu_hover			\Default Work Unit\menu_hover	
+	659043495	card_use			\Default Work Unit\card_use	
 	2300403011	Set_State_end			\Default Work Unit\Set_State_end	
 	2302270969	Set_State_menu			\Default Work Unit\Set_State_menu	
 	2894173942	lose_SFX			\Default Work Unit\lose_SFX	
