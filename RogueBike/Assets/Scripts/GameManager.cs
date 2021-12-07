@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     private TMP_Text timerText;
     private float time;
 
+    [SerializeField]
+    private TMP_Text lapCounter;
+
     //private List<GameObject> shownCards = new List<GameObject>();
 
     //[SerializeField]
@@ -63,6 +66,8 @@ public class GameManager : MonoBehaviour
     {
         time += Time.deltaTime;
         timerText.text = "Time: " + string.Format("{0,2:00}:{1,2:00.00}", (int)time / 60, time % 60);
+        lapCounter.text = "Lap " + string.Format("{0}/{1}", playerController.Lap, playerController.MaxLap);
+
         playerController.CheckForInput();
         //aiController.Update();
 
@@ -81,7 +86,7 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < cards.Count; i++)
             {
-                cards[i].SetActive(true);
+                cards[i].SetActive(false);
                 //Object.Destroy(shownCards[i]);
             }
             //shownCards.Clear();

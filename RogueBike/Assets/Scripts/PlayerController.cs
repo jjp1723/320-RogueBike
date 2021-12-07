@@ -26,6 +26,15 @@ public class PlayerController : MonoBehaviour
     private float tireRotationFromBody = 0.0f;
     private bool tireRotatedLastFrame = false;
 
+    private int lap = 0;
+    public int Lap { get { return lap; } }
+
+    private const int maxLap = 3;
+    public int MaxLap { get { return maxLap; } }
+
+    private int currCheckpoint = 1;
+    private const int lastCheckpoint = 4;
+
     public float RotationalSpeed
     {
         get
@@ -141,10 +150,10 @@ public class PlayerController : MonoBehaviour
             {
                 tireRotationFromBody = -20.0f;
             }
-
+            
             tireRotationFromBody += rotationalSpeed * 2 * Time.deltaTime * Mathf.Sign(rotation);
 
-            frontTire.transform.rotation = Quaternion.Euler(player.transform.forward * (rotation + tireRotationFromBody) + player.transform.eulerAngles);
+            frontTire.transform.rotation = Quaternion.Euler(player.transform.forward * (tireRotationFromBody) + player.transform.eulerAngles);
         }
     }
 
@@ -160,7 +169,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collider)
     {
+        if (collider.gameObject.tag == "Checkpoint")
+        {
+            return;
+        }
+
         rb.angularVelocity = 0;
-        rb.drag = 2;
+        rb.drag = 1;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag.Equals("Checkpoint"))
+        {
+            if (collider.gameObject.name.Contains("" + currCheckpoint))
+            {
+                currCheckpoint++;
+            }
+
+            if (collider.gameObject.name.Equals("FinishLine") && currCheckpoint == lastCheckpoint)
+            {
+                lap++;
+                currCheckpoint = 1;
+            }
+
+            return;
+        }
     }
 }
