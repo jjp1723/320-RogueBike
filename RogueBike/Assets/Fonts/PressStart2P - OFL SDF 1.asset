@@ -160,11 +160,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: PressStart2P - OFL SDF
+  m_Name: PressStart2P - OFL SDF 1
   m_EditorClassIdentifier: 
-  hashCode: 1587081596
+  hashCode: 1755004013
   material: {fileID: -6840017379966176326}
-  materialHashCode: -891947684
+  materialHashCode: 940923053
   m_Version: 1.1.0
   m_SourceFontFileGUID: 78e8fe52660ae6f45bf2113f6bae9bbc
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 78e8fe52660ae6f45bf2113f6bae9bbc, type: 3}

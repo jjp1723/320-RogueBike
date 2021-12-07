@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private TMP_Text lapCounter;
+    
+    [SerializeField]
+    private TMP_Text countInText;
 
     //private List<GameObject> shownCards = new List<GameObject>();
 
@@ -61,18 +64,41 @@ public class GameManager : MonoBehaviour
         //    turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
         //}
 
-        time = 0.0f;
+        time = -3.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
+        if (time < 1)
+        {
+            float positiveTime = Mathf.Abs(time);
+            float scale = 10 * (positiveTime - (int)positiveTime);
+            countInText.gameObject.transform.localScale = new Vector3(scale, scale);
+
+            if (time < 0)
+            {
+                countInText.text = "" + Mathf.Ceil(positiveTime);
+                return;
+            }
+            else
+            {
+                countInText.text = "Go!";
+            }
+        }
+        else if (time < 3 && time > 1.6)
+        {
+            countInText.gameObject.SetActive(false);
+        }
+
         //Player has hit the last lap
-        if(playerController.Lap - 1 == playerController.MaxLap || aiPlayerController.Lap == aiPlayerController.MaxLap)
+        if (playerController.Lap - 1 == playerController.MaxLap || aiPlayerController.Lap - 1 == aiPlayerController.MaxLap)
         {
             SceneManager.LoadScene(2);
         }
-        time += Time.deltaTime;
+        
         timerText.text = "Time: " + string.Format("{0,2:00}:{1,2:00.00}", (int)time / 60, time % 60);
         lapCounter.text = "Lap " + string.Format("{0}/{1}", playerController.Lap, playerController.MaxLap);
 

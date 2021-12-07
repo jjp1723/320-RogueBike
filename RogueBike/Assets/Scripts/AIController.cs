@@ -24,6 +24,8 @@ public class AIController : MonoBehaviour
 
     private float radius;
 
+    private float waitTime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,11 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (waitTime + Time.deltaTime < 3.1)
+        {
+            waitTime += Time.deltaTime;
+            return;
+        }
         ai.MovePlayer(forwardForceMagnitude * Time.deltaTime);
         UpdateDir();
 

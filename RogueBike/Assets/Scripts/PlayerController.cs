@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private float tireRotationFromBody = 0.0f;
     private bool tireRotatedLastFrame = false;
 
-    private int lap = 0;
+    private int lap = 1;
     public int Lap { get { return lap; } }
 
     private const int maxLap = 3;
