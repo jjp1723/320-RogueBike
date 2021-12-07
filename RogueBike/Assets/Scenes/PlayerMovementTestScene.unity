@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardForceMagnitude: 2500
-  brakeForceMagnitude: 500
+  brakeForceMagnitude: 3000
   rotationalSpeed: 100
   MAX_VELOCITY_MAG: 1100
   MAX_ACCELERATION_MAG: 1000
