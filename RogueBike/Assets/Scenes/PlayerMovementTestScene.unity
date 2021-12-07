@@ -530,7 +530,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1080,7 +1080,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1210,7 +1210,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1310,7 +1310,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1365,8 +1365,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 6266ea3b3fb5fa54196faf12ad141ad4, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: 21300000, guid: 425bd10bef33282498875501502c3043, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 252fb08dfaa055b41ae5fee612e3b437, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 251c0ec52661ccf45b68db72218fe3cd, type: 3}
   - m_RefCount: 5
@@ -1382,7 +1382,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 89a70699b3276484eaf02f95b2efb05e, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 4dd77c83978294c46a84d4e245875cc0, type: 3}
+    m_Data: {fileID: 21300000, guid: 252fb08dfaa055b41ae5fee612e3b437, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: bd972215303d2254492648dabcb502fd, type: 3}
   - m_RefCount: 3
@@ -1394,15 +1394,15 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: a7482d2b55578644aba717a9e75e31b2, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 1c2190f71bd36bc49ba2cde555768ef5, type: 3}
+    m_Data: {fileID: 21300000, guid: 4dd77c83978294c46a84d4e245875cc0, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 4f5c6583c6b9fa141b247b4c0eb62afa, type: 3}
+    m_Data: {fileID: 21300000, guid: 1c2190f71bd36bc49ba2cde555768ef5, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: de0dbcb296d4a044eadc0099ebdbe000, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: caa46d9a4b4cda64681e4aeca0713751, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 4f5c6583c6b9fa141b247b4c0eb62afa, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 103
     m_Data:
@@ -1794,10 +1794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc74f9ac9614c408e84e5b0456f69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForceMagnitude: 2000
-  brakeForceMagnitude: 500
+  forwardForceMagnitude: 2500
+  brakeForceMagnitude: 3000
   rotationalSpeed: 120
-  MAX_VELOCITY_MAG: 1500
+  MAX_VELOCITY_MAG: 1100
   MAX_ACCELERATION_MAG: 1000
 --- !u!212 &128479864
 SpriteRenderer:
