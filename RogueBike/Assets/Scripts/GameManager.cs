@@ -53,6 +53,11 @@ public class GameManager : MonoBehaviour
 
         cards.Add(rightTurnCard);
 
+        GameObject cancelVelocityCard = GameObject.Find("CancelVelocity_Card");
+        cancelVelocityCard.SetActive(false);
+
+        cards.Add(cancelVelocityCard);
+
         //playerController = player.GetComponent<PlayerController>();
         playerController = player.GetComponent<PlayerController>();
         aiController = ai.GetComponent<AIController>();

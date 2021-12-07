@@ -165,6 +165,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void CancelVelocity()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
     private void OnCollisionEnter2D(Collision2D collider)
     {
         Debug.Log(collider.gameObject.name);
