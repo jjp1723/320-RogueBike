@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> cards = new List<GameObject>();
     private Dictionary<string, TurnCard> turnDict = new Dictionary<string, TurnCard>();
+
+    [SerializeField]
+    private TMP_Text timerText;
+    private float time;
 
     //private List<GameObject> shownCards = new List<GameObject>();
 
@@ -49,11 +54,15 @@ public class GameManager : MonoBehaviour
         //    Debug.Log(cards[i].name);
         //    turnDict[cards[i].name] = cards[i].GetComponent<TurnCard>();
         //}
+
+        time = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+        timerText.text = "Time: " + string.Format("{0,2:00}:{1,2:00.00}", (int)time / 60, time % 60);
         playerController.CheckForInput();
         //aiController.Update();
 
