@@ -1505,7 +1505,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 78a29e65e0e076d46af4d65762ead6d4, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fe9df6be2dde34494d06a6fd158b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curTime: 0
+  playerTime: 0
   aiTime: 0
   aiTimeText: {fileID: 1780759437}
   playerTimeText: {fileID: 1751973732}
