@@ -172,11 +172,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        Debug.Log(collider.gameObject.name);
-        Debug.Log(collider.GetContact(0));
-        Vector3 normal = collider.GetContact(0).normal;
-        Debug.Log(Vector3.Angle(normal, rb.velocity));
-        Debug.Log(collider.GetContact(0).relativeVelocity);
+        //Debug.Log(collider.gameObject.name);
+        //Debug.Log(collider.GetContact(0));
+        //Vector3 normal = collider.GetContact(0).normal;
+        //Debug.Log(Vector3.Angle(normal, rb.velocity));
+        //Debug.Log(collider.GetContact(0).relativeVelocity);
         rb.drag = 8;
     }
 

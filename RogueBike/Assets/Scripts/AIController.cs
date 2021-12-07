@@ -62,7 +62,7 @@ public class AIController : MonoBehaviour
         float targetRadius = nodes[curNode].transform.localScale.x;
         if ((Mathf.Pow(curPos.x - targetPos.x, 2) + Mathf.Pow(curPos.y - targetPos.y, 2)) <= Mathf.Pow(targetRadius + ai.transform.localScale.x, 2))
         {
-            Debug.Log("Hit Node "+ curNode);
+            //Debug.Log("Hit Node "+ curNode);
             if (curNode < nodes.Length-1)
             {
                 curNode++;
