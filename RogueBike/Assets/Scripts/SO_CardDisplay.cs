@@ -45,11 +45,13 @@ public class SO_CardDisplay : MonoBehaviour
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 150, gameObject.transform.position.z);
         gameObject.transform.localScale = new Vector3(4, 4, 1);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         gameObject.transform.localScale = new Vector3(2, 2, 1);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 150, gameObject.transform.position.z);
     }
 }

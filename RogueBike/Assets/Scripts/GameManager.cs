@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         //Player has hit the last lap
         if(playerController.Lap - 1 == playerController.MaxLap || aiPlayerController.Lap == aiPlayerController.MaxLap)
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(2);
         }
         time += Time.deltaTime;
         timerText.text = "Time: " + string.Format("{0,2:00}:{1,2:00.00}", (int)time / 60, time % 60);
@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < cards.Count; i++)
             {
+                cards[i].transform.localScale = new Vector3(2, 2, 1);
+                cards[i].transform.position = new Vector3(cards[i].transform.position.x, 88, cards[i].transform.position.z);
                 cards[i].SetActive(false);
                 //Object.Destroy(shownCards[i]);
             }
