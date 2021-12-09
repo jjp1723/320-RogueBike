@@ -9,6 +9,7 @@ public class AIController : MonoBehaviour
 
     private float rotationalSpeed;
     private float forwardForceMagnitude;
+    private float brakeForceMagnitude;
 
     [SerializeField]
     private GameObject nodeParent;
@@ -32,6 +33,7 @@ public class AIController : MonoBehaviour
     {
         rotationalSpeed = ai.RotationalSpeed;
         forwardForceMagnitude = ai.ForwardForceMagnitude;
+        brakeForceMagnitude = ai.BrakeForceMagnitude;
 
         curNode = 0;
 
@@ -56,11 +58,22 @@ public class AIController : MonoBehaviour
             waitTime += Time.deltaTime;
             return;
         }
-        ai.MovePlayer(forwardForceMagnitude * Time.deltaTime);
+
+        float targetDist = (Mathf.Pow(curPos.x - targetPos.x, 2) + Mathf.Pow(curPos.y - targetPos.y, 2));
+
+        if (targetDist < 4)
+        {
+            ai.MovePlayer(brakeForceMagnitude * Time.deltaTime);
+        }
+        else
+        {
+            ai.MovePlayer(forwardForceMagnitude * Time.deltaTime);
+        }
+
         UpdateDir();
 
         float targetRadius = nodes[curNode].transform.localScale.x;
-        if ((Mathf.Pow(curPos.x - targetPos.x, 2) + Mathf.Pow(curPos.y - targetPos.y, 2)) <= Mathf.Pow(targetRadius + ai.transform.localScale.x, 2))
+        if (targetDist <= Mathf.Pow(targetRadius + ai.transform.localScale.x, 2))
         {
             //Debug.Log("Hit Node "+ curNode);
             if (curNode < nodes.Length-1)

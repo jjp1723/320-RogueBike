@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
 
         time = -3.0f;
 
+        PlayerPrefs.SetInt("AIFinished", 0);
     }
 
     // Update is called once per frame
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
         {
             aiFinished = true;
             PlayerPrefs.SetFloat("AITime", time);
+            PlayerPrefs.SetInt("AIFinished", 1);
         }
         //Player has hit the last lap
         if (playerController.Lap - 1 == playerController.MaxLap /*|| aiPlayerController.Lap - 1 == aiPlayerController.MaxLap*/)
@@ -148,30 +150,37 @@ public class GameManager : MonoBehaviour
         }
 
         //can only play cards if paused
-        //if (Time.timeScale < 1)
-        //{
-        //    //play card. Checking on up to make it only happen once
-        //    if (Input.GetKeyUp(KeyCode.M))
-        //    {
-        //        player.transform.Rotate(0, 0, turnDict["RightTurn"].Angle);
-        //    }
-        //    if (Input.GetKeyUp(KeyCode.N))
-        //    {
-        //        player.transform.Rotate(0, 0, turnDict["LeftTurn"].Angle);
-        //    }
+        if (Time.timeScale < 1)
+        {
+            //left turn
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                SO_CardDisplay card = cards[0].GetComponent<SO_CardDisplay>();
+                if(card != null)
+                {
+                    card.OnPointerClick(null);
+                }
+            }
 
-        //    //test clicking on card with mouse
-        //    if (Input.GetMouseButtonDown(0)) //left mouse bottom
-        //    {
-        //        Vector3 clickpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //        Vector2 click2D = new Vector2(clickpos.x, clickpos.y);
+            //right turn
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                SO_CardDisplay card = cards[1].GetComponent<SO_CardDisplay>();
+                if (card != null)
+                {
+                    card.OnPointerClick(null);
+                }
+            }
 
-        //        RaycastHit2D hit = Physics2D.Raycast(click2D, Vector2.zero);
-        //        if (hit.collider != null)
-        //        {
-        //            Debug.Log(hit.collider.gameObject.name);
-        //        }
-        //    }
-        //}
+            //big break
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SO_CardDisplay card = cards[2].GetComponent<SO_CardDisplay>();
+                if (card != null)
+                {
+                    card.OnPointerClick(null);
+                }
+            }
+        }
     }
 }

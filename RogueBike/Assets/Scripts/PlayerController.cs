@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public float BrakeForceMagnitude { get { return brakeForceMagnitude; } }
+
     //Card to turn
     //[SerializeField]
     //private List<GameObject> cards;
