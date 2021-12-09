@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
 
         time = -3.0f;
 
+        PlayerPrefs.SetInt("AIFinished", 0);
     }
 
     // Update is called once per frame
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
         {
             aiFinished = true;
             PlayerPrefs.SetFloat("AITime", time);
+            PlayerPrefs.SetInt("AIFinished", 1);
         }
         //Player has hit the last lap
         if (playerController.Lap - 1 == playerController.MaxLap /*|| aiPlayerController.Lap - 1 == aiPlayerController.MaxLap*/)

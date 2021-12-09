@@ -61,7 +61,7 @@ public class AIController : MonoBehaviour
 
         float targetDist = (Mathf.Pow(curPos.x - targetPos.x, 2) + Mathf.Pow(curPos.y - targetPos.y, 2));
 
-        if (targetDist < 2)
+        if (targetDist < 4)
         {
             ai.MovePlayer(brakeForceMagnitude * Time.deltaTime);
         }
