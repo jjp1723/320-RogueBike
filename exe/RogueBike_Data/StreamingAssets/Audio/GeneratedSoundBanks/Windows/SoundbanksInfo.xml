@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\College Semester 5\IGME 320\Game 3\RogueBike\RogueBike\RogueBike_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\College Semester 5\IGME 320\Game 3\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\College Semester 5\IGME 320\Game 3\RogueBike\RogueBike\RogueBike_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\College Semester 5\IGME 320\Game 3\RogueBike\RogueBike\RogueBike_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,16 +16,32 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4251510771" Language="SFX" Hash="2742162130">
+		<SoundBank Id="4251510771" Language="SFX" Hash="3602540648">
 			<ObjectPath>\SoundBanks\Default Work Unit\UnitySoundBank</ObjectPath>
 			<ShortName>UnitySoundBank</ShortName>
 			<Path>UnitySoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3930710300" Name="card_hover" ObjectPath="\Events\Default Work Unit\card_hover" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="55772831" Language="SFX">
+							<ShortName>card_hover.wav</ShortName>
+							<Path>SFX\card_hover_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="659043495" Name="card_use" ObjectPath="\Events\Default Work Unit\card_use" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="667994561" Language="SFX">
+							<ShortName>cardUse.wav</ShortName>
+							<Path>SFX\cardUse_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2894173942" Name="lose_SFX" ObjectPath="\Events\Default Work Unit\lose_SFX" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
 							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
 						</File>
 						<File Id="1029459887" Language="SFX">
 							<ShortName>loseRaceSFX.wav</ShortName>
@@ -33,19 +49,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\menu" DurationType="Infinite">
+				<Event Id="309439191" Name="menu_hover" ObjectPath="\Events\Default Work Unit\menu_hover" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
 					<IncludedMemoryFiles>
-						<File Id="14557926" Language="SFX">
-							<ShortName>intro.wav</ShortName>
-							<Path>SFX\intro_10C4C929.wem</Path>
-						</File>
-						<File Id="316690257" Language="SFX">
-							<ShortName>introLoop.wav</ShortName>
-							<Path>SFX\introLoop_D79FB2B7.wem</Path>
+						<File Id="130631985" Language="SFX">
+							<ShortName>menuButton.wav</ShortName>
+							<Path>SFX\menuButton_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1518346846" Name="raceStart_SFX" ObjectPath="\Events\Default Work Unit\raceStart_SFX" DurationType="OneShot" DurationMin="99.483871" DurationMax="99.483871">
+				<Event Id="2300403011" Name="Set_State_end" ObjectPath="\Events\Default Work Unit\Set_State_end" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="245698847" Language="SFX">
+							<ShortName>endLoop.wav</ShortName>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4207344442" Name="Set_State_game" ObjectPath="\Events\Default Work Unit\Set_State_game" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="241615685" Language="SFX">
 							<ShortName>raceStartSFX.wav</ShortName>
@@ -56,32 +76,6 @@
 							<Path>SFX\mainLoop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2300403011" Name="Set_State_end" ObjectPath="\Events\Default Work Unit\Set_State_end" DurationType="OneShot" DurationMin="14.193560" DurationMax="14.193560">
-					<IncludedMemoryFiles>
-						<File Id="245698847" Language="SFX">
-							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<ActionSetState>
-						<ActionSetStateEntry Id="529726532" Name="end" ObjectPath="\States\Default Work Unit\stateGroup\end"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="4207344442" Name="Set_State_game" ObjectPath="\Events\Default Work Unit\Set_State_game" DurationType="OneShot" DurationMin="99.483879" DurationMax="99.483879">
-					<IncludedMemoryFiles>
-						<File Id="241615685" Language="SFX">
-							<ShortName>raceStartSFX.wav</ShortName>
-							<Path>SFX\raceStartSFX_D79FB2B7.wem</Path>
-						</File>
-						<File Id="594753247" Language="SFX">
-							<ShortName>mainLoop.wav</ShortName>
-							<Path>SFX\mainLoop_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<ActionSetState>
-						<ActionSetStateEntry Id="702482391" Name="game" ObjectPath="\States\Default Work Unit\stateGroup\game"/>
-					</ActionSetState>
 				</Event>
 				<Event Id="2302270969" Name="Set_State_menu" ObjectPath="\Events\Default Work Unit\Set_State_menu" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -94,15 +88,12 @@
 							<Path>SFX\introLoop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<ActionSetState>
-						<ActionSetStateEntry Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\stateGroup\menu"/>
-					</ActionSetState>
 				</Event>
 				<Event Id="3574552973" Name="win_SFX" ObjectPath="\Events\Default Work Unit\win_SFX" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="245698847" Language="SFX">
 							<ShortName>endLoop.wav</ShortName>
-							<Path>SFX\endLoop_10C4C929.wem</Path>
+							<Path>SFX\endLoop_D79FB2B7.wem</Path>
 						</File>
 						<File Id="787154511" Language="SFX">
 							<ShortName>winRaceSFX.wav</ShortName>
@@ -116,13 +107,21 @@
 					<ShortName>intro.wav</ShortName>
 					<Path>SFX\intro_10C4C929.wem</Path>
 				</File>
+				<File Id="55772831" Language="SFX">
+					<ShortName>card_hover.wav</ShortName>
+					<Path>SFX\card_hover_D79FB2B7.wem</Path>
+				</File>
+				<File Id="130631985" Language="SFX">
+					<ShortName>menuButton.wav</ShortName>
+					<Path>SFX\menuButton_D79FB2B7.wem</Path>
+				</File>
 				<File Id="241615685" Language="SFX">
 					<ShortName>raceStartSFX.wav</ShortName>
 					<Path>SFX\raceStartSFX_D79FB2B7.wem</Path>
 				</File>
 				<File Id="245698847" Language="SFX">
 					<ShortName>endLoop.wav</ShortName>
-					<Path>SFX\endLoop_10C4C929.wem</Path>
+					<Path>SFX\endLoop_D79FB2B7.wem</Path>
 				</File>
 				<File Id="258084987" Language="SFX">
 					<ShortName>mainLoop.wav</ShortName>
@@ -132,9 +131,9 @@
 					<ShortName>introLoop.wav</ShortName>
 					<Path>SFX\introLoop_D79FB2B7.wem</Path>
 				</File>
-				<File Id="594753247" Language="SFX">
-					<ShortName>mainLoop.wav</ShortName>
-					<Path>SFX\mainLoop_10C4C929.wem</Path>
+				<File Id="667994561" Language="SFX">
+					<ShortName>cardUse.wav</ShortName>
+					<Path>SFX\cardUse_D79FB2B7.wem</Path>
 				</File>
 				<File Id="787154511" Language="SFX">
 					<ShortName>winRaceSFX.wav</ShortName>
@@ -145,17 +144,6 @@
 					<Path>SFX\loseRaceSFX_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
-			<StateGroups>
-				<StateGroup Id="529726532" Name="end" ObjectPath="\States\Default Work Unit\stateGroup\end" GUID="{9787BE76-FC07-4434-B8E6-407F6839211B}">
-					<States/>
-				</StateGroup>
-				<StateGroup Id="702482391" Name="game" ObjectPath="\States\Default Work Unit\stateGroup\game" GUID="{975EDD60-1F38-4E6B-AF57-220B4CE4CF9F}">
-					<States/>
-				</StateGroup>
-				<StateGroup Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\stateGroup\menu" GUID="{374877D0-A71F-49BD-8E5A-ADD6CB31B53B}">
-					<States/>
-				</StateGroup>
-			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
