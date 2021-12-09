@@ -111,7 +111,8 @@ public class GameManager : MonoBehaviour
         //Player has hit the last lap
         if (playerController.Lap - 1 == playerController.MaxLap /*|| aiPlayerController.Lap - 1 == aiPlayerController.MaxLap*/)
         {
-
+            AkSoundEngine.StopAll();
+            AkSoundEngine.PostEvent("win_SFX", gameObject);
             PlayerPrefs.SetFloat("PlayerTime", time);
             SceneManager.LoadScene(2);
         }

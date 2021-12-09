@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class CardSounds : MonoBehaviour
 {
-    //AkSoundEngine.PostEvent("nameOfEvent", gameobject);
+    public void OnHover()
+    {
+        AkSoundEngine.PostEvent("card_hover", gameObject);
+    }
+    public void OnClick()
+    {
+        AkSoundEngine.PostEvent("card_use", gameObject);
+    }
 }
