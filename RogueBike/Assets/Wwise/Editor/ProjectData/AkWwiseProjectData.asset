@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d6be68d512427d40af00efc0fa3f52d9
     GuidInternal: 
-    m_lastTime: -8585626932779547279
+    m_lastTime: -8585625393716993011
     List:
+    - name: card_hover
+      guid: 74c9974934993e44b93022037f81c201
+      id: 3930710300
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6be68d512427d40af00efc0fa3f52d9
+      - ElementName: card_hover
+        ObjectType: 3
+        guid: 74c9974934993e44b93022037f81c201
+      Path: Events\Default Work Unit\card_hover
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: card_use
       guid: e80858ae7d1f264682f4e70c53afffc2
       id: 659043495
