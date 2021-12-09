@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2302270969	Set_State_menu			\Default Work Unit\Set_State_menu	
 	2894173942	lose_SFX			\Default Work Unit\lose_SFX	
 	3574552973	win_SFX			\Default Work Unit\win_SFX	
+	3930710300	card_hover			\Default Work Unit\card_hover	
 	4207344442	Set_State_game			\Default Work Unit\Set_State_game	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -12,12 +13,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	14557926	intro	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\intro_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuSequence\intro		1820968
+	55772831	card_hover	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\card_hover_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\cardHoverSFX\card_hover		12890
 	130631985	menuButton	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\menuButton_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\menuContainer\menuSFX\menuButton		16674
 	241615685	raceStartSFX	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\raceStartSFX_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\raceStartSFX\raceStartSFX		910516
 	245698847	endLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\endLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\EndSequence\endLoop		2503808
 	258084987	mainLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\mainLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoopSequence\mainLoop		16843420
 	316690257	introLoop	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\introLoop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuSequence\introLoop		5918000
-	667994561	cardUse	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\cardUse_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\cardSFX\cardUse		29028
+	667994561	cardUse	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\cardUse_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\cardUseSFX\cardUse		29028
 	787154511	winRaceSFX	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\winRaceSFX_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\winSFX\winRaceSFX		910516
 	1029459887	loseRaceSFX	C:\Users\Brian\Documents\GitHub\RogueBike\RogueBike\RogueBike_WwiseProject\.cache\Windows\SFX\loseRaceSFX_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\SFX\loseSFX\loseRaceSFX		910516
 

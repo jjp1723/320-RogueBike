@@ -145,7 +145,18 @@
 						<Action Name="" ID="{AB66D428-7216-4CCD-B619-7308AFA3392A}" ShortID="454394158">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="cardSFX" ID="{A59994A7-8581-44A6-89F2-C81E754FA822}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+									<ObjectRef Name="cardUseSFX" ID="{A59994A7-8581-44A6-89F2-C81E754FA822}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="card_hover" ID="{4997C974-9934-443E-B930-22037F81C201}">
+					<ChildrenList>
+						<Action Name="" ID="{0C0C94D4-CB4D-454E-BDE3-BB94F3E790FD}" ShortID="101198170">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cardHoverSFX" ID="{8C55C76E-0D61-409C-A9FA-16EBD69A3BB7}" WorkUnitID="{04C0D0F1-2F8B-4AD3-8D2F-A9BE41EB1831}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

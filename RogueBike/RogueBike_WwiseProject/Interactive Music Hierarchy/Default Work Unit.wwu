@@ -5,7 +5,14 @@
 			<ChildrenList>
 				<Folder Name="SFX" ID="{A24803FE-1B69-4000-93F0-8595116AB3A8}" ShortID="928733429">
 					<ChildrenList>
-						<MusicSegment Name="cardSFX" ID="{A59994A7-8581-44A6-89F2-C81E754FA822}" ShortID="337185211">
+						<MusicSegment Name="cardUseSFX" ID="{A59994A7-8581-44A6-89F2-C81E754FA822}" ShortID="337185211">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
@@ -591,6 +598,87 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicSegment Name="cardHoverSFX" ID="{8C55C76E-0D61-409C-A9FA-16EBD69A3BB7}" ShortID="21341986">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B9981F8-C0D9-439E-933F-E464F8181E13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="card_hover" ID="{6F02BFE7-64DC-4767-B5B4-29E7DB3CE065}" ShortID="131579078">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DA6895FA-EFDB-4FDA-8BE4-7ED0B67E6431}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="card_hover" ID="{BDB546AC-448B-416F-B0D1-F5004F8C296E}">
+											<Language>SFX</Language>
+											<AudioFile>card_hover.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="55772831"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{37CF34E8-5DAD-4D9E-AE86-A8686BBE59AD}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0A539EE3-905D-40FF-9F70-5F2703E37603}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="card_hover" ID="{7B97C00C-E58C-4807-BFB4-C765CA05D17A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="145.419501133787"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="card_hover" ID="{BDB546AC-448B-416F-B0D1-F5004F8C296E}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{9E9E781C-3D60-458F-BD4D-826C8F063B0B}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{A5680454-CF08-4983-AD3B-BD11D16F84BB}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
